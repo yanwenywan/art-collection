@@ -27,7 +27,7 @@ const thumbColors = ['#2a3d2a', '#1f3028', '#263326', '#1c2b20'];
 
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: $gap;
     padding: $gap;
   }
@@ -74,9 +74,15 @@ const thumbColors = ['#2a3d2a', '#1f3028', '#263326', '#1c2b20'];
     color: $color-muted;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     .gallery-grid {
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 800px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
     }
 
     .thumb {
