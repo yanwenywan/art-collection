@@ -34,8 +34,10 @@ a {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: url('/images/temple.webp') center / cover no-repeat;
-  background-color: $color-bg; // fallback when image is missing
+  background-color: $color-bg;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   filter: blur(6px);
   transform: scale(1.05); // prevents blur edge artifacts
 
