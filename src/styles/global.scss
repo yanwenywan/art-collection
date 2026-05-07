@@ -1,0 +1,55 @@
+@use 'tokens' as *;
+@use 'kinghwa';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: $font-body;
+  color: $color-text;
+  background: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: $color-accent;
+}
+
+// Fixed blurred background — sits behind all content
+// TODO: add a real image to /public/images/bg.jpg and update the url() below
+.bg-blur {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('/images/bg.jpg') center / cover no-repeat;
+  background-color: $color-bg; // fallback when image is missing
+  filter: blur(12px);
+  transform: scale(1.05); // prevents blur edge artifacts
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+@media (max-width: 768px) {
+  // $sidebar-width becomes a full-width top nav on mobile
+  // gallery rows shrink to single-column layout
+  // handled in component-level styles
+}

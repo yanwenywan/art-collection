@@ -1,0 +1,44 @@
+---
+---
+
+<div class="shell">
+  <aside class="sidebar-col">
+    <slot name="sidebar" />
+  </aside>
+  <main class="content-col">
+    <slot />
+  </main>
+</div>
+
+<style lang="scss">
+  @use '../styles/tokens' as *;
+
+  .shell {
+    display: grid;
+    grid-template-columns: $sidebar-width 1fr;
+    min-height: 100vh;
+  }
+
+  .sidebar-col {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .content-col {
+    min-width: 0;
+    background: rgba(15, 20, 15, 0.45);
+  }
+
+  @media (max-width: 768px) {
+    .shell {
+      grid-template-columns: 1fr;
+    }
+
+    .sidebar-col {
+      position: static;
+      height: auto;
+    }
+  }
+</style>

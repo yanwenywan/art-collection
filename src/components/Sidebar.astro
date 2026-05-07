@@ -1,0 +1,94 @@
+---
+import Avatar from './Avatar.astro';
+
+// TODO: toggle when commissions open/close
+const commissionsOpen = false;
+---
+
+<div class="sidebar">
+  <Avatar size={96} />
+  <div class="identity">
+    <h2 class="name">Yan Wenyuan</h2>
+    <!-- TODO: replace # with real Discord invite URL -->
+    <a href="#" class="discord-link" target="_blank" rel="noopener noreferrer">
+      <iconify-icon icon="simple-icons:discord" width="15" height="15" />
+      <span>yanwenyuan</span>
+    </a>
+  </div>
+  <p class="bio">
+    <!-- TODO: add real bio -->
+    Artist &amp; illustrator. I draw things.
+  </p>
+  <span class:list={['commission-badge', { open: commissionsOpen }]}>
+    {commissionsOpen ? 'Commissions open' : 'Commissions closed'}
+  </span>
+</div>
+
+<style lang="scss">
+  @use '../styles/tokens' as *;
+
+  .sidebar {
+    background: $color-surface;
+    backdrop-filter: blur(8px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: $gap * 1.5 $gap;
+    text-align: center;
+  }
+
+  .identity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .name {
+    font-family: $font-display;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: $color-text;
+  }
+
+  .discord-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: $font-body;
+    font-size: 0.8rem;
+    color: $color-muted;
+    text-decoration: none;
+    transition: color 0.15s;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+
+  .bio {
+    font-family: $font-body;
+    font-size: 0.85rem;
+    color: $color-muted;
+    line-height: 1.6;
+  }
+
+  .commission-badge {
+    font-family: $font-display;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.07);
+    color: $color-muted;
+
+    &.open {
+      background: rgba(58, 99, 66, 0.35);
+      color: #8fbc8f;
+    }
+  }
+</style>
