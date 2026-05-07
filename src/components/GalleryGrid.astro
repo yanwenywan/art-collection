@@ -1,92 +1,97 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-const albums = await getCollection('albums');
+const albums = await getCollection("albums");
 
 // Cycle through a few dark-green placeholder tones
-const thumbColors = ['#2a3d2a', '#1f3028', '#263326', '#1c2b20'];
+const thumbColors = ["#2a3d2a", "#1f3028", "#263326", "#1c2b20"];
 ---
 
 <section class="gallery-grid">
-  {albums.map((album, i) => (
-    <a href={`/albums/${album.id}`} class="gallery-item">
-      {/* TODO: replace div.thumb with <Image> once cover images are added */}
-      <div class="thumb" style={`background-color: ${thumbColors[i % thumbColors.length]}`}>
-        <span class="thumb-label">TODO: add cover image</span>
-      </div>
-      <p class="title">{album.data.title}</p>
-      {album.data.description && (
-        <p class="desc">{album.data.description}</p>
-      )}
-    </a>
-  ))}
+    {
+        albums.map((album, i) => (
+            <a href={`/albums/${album.id}/`} class="gallery-item">
+                {/* TODO: replace div.thumb with <Image> once cover images are added */}
+                <div
+                    class="thumb"
+                    style={`background-color: ${thumbColors[i % thumbColors.length]}`}
+                >
+                    <span class="thumb-label">TODO: add cover image</span>
+                </div>
+                <p class="title">{album.data.title}</p>
+                {album.data.description && (
+                    <p class="desc">{album.data.description}</p>
+                )}
+            </a>
+        ))
+    }
 </section>
 
 <style lang="scss">
-  @use '../styles/tokens' as *;
+    @use "../styles/tokens" as *;
 
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: $gap;
-    padding: $gap;
-  }
-
-  .gallery-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .thumb {
-    height: $gallery-row-height;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.15s;
-
-    .gallery-item:hover & {
-      opacity: 0.85;
-    }
-  }
-
-  .thumb-label {
-    font-family: $font-body;
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.25);
-    text-align: center;
-    padding: 0 1rem;
-  }
-
-  .title {
-    font-family: $font-display;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: $color-text;
-  }
-
-  .desc {
-    font-family: $font-body;
-    font-size: 0.8rem;
-    color: $color-muted;
-  }
-
-  @media (max-width: 1200px) {
     .gallery-grid {
-      grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $gap;
+        padding: $gap;
     }
-  }
 
-  @media (max-width: 800px) {
-    .gallery-grid {
-      grid-template-columns: 1fr;
+    .gallery-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: inherit;
     }
 
     .thumb {
-      height: 180px;
+        height: $gallery-row-height;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.15s;
+
+        .gallery-item:hover & {
+            opacity: 0.85;
+        }
     }
-  }
+
+    .thumb-label {
+        font-family: $font-body;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.25);
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .title {
+        font-family: $font-display;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: $color-text;
+    }
+
+    .desc {
+        font-family: $font-body;
+        font-size: 0.8rem;
+        color: $color-muted;
+    }
+
+    @media (max-width: 1200px) {
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 800px) {
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+
+        /* .thumb {
+            height: 180px;
+        } */
+    }
 </style>
