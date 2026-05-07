@@ -30,14 +30,13 @@ a {
 }
 
 // Fixed blurred background — sits behind all content
-// TODO: add a real image to /public/images/bg.jpg and update the url() below
 .bg-blur {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: url('/images/bg.jpg') center / cover no-repeat;
+  background: url('/images/temple.webp') center / cover no-repeat;
   background-color: $color-bg; // fallback when image is missing
-  filter: blur(12px);
+  filter: blur(6px);
   transform: scale(1.05); // prevents blur edge artifacts
 
   &::after {

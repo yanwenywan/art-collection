@@ -1,27 +1,29 @@
 ---
 import Avatar from './Avatar.astro';
-
-// TODO: toggle when commissions open/close
-const commissionsOpen = false;
 ---
 
 <div class="sidebar">
   <Avatar size={96} />
   <div class="identity">
-    <h2 class="name">Yan Wenyuan</h2>
-    <!-- TODO: replace # with real Discord invite URL -->
-    <a href="#" class="discord-link" target="_blank" rel="noopener noreferrer">
-      <iconify-icon icon="simple-icons:discord" width="15" height="15" />
-      <span>yanwenyuan</span>
-    </a>
+    <h2 class="name">燕文院<br/>Yanwenyuan</h2>
+    <div class="social-row">
+      <!-- TODO: replace # with real Discord invite URL -->
+      <a href="#" class="social-link" target="_blank" rel="noopener noreferrer">
+        <iconify-icon icon="simple-icons:discord" width="14" height="14" />
+        <span>yanwenyuan</span>
+      </a>
+      <span class="sep">|</span>
+      <a href="https://yanwenyuan.uk" class="social-link" target="_blank" rel="noopener noreferrer">
+        <iconify-icon icon="ph:globe" width="14" height="14" />
+        <span>website</span>
+      </a>
+    </div>
   </div>
+  <hr/>
   <p class="bio">
     <!-- TODO: add real bio -->
-    Artist &amp; illustrator. I draw things.
+    Digital art of mostly dragons. I also write in wenyan and worldbuild sometimes.
   </p>
-  <span class:list={['commission-badge', { open: commissionsOpen }]}>
-    {commissionsOpen ? 'Commissions open' : 'Commissions closed'}
-  </span>
 </div>
 
 <style lang="scss">
@@ -53,10 +55,16 @@ const commissionsOpen = false;
     color: $color-text;
   }
 
-  .discord-link {
+  .social-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .social-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
+    gap: 0.3rem;
     font-family: $font-body;
     font-size: 0.8rem;
     color: $color-muted;
@@ -68,6 +76,18 @@ const commissionsOpen = false;
     }
   }
 
+  .sep {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.2);
+    user-select: none;
+  }
+
+  hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
   .bio {
     font-family: $font-body;
     font-size: 0.85rem;
@@ -75,20 +95,4 @@ const commissionsOpen = false;
     line-height: 1.6;
   }
 
-  .commission-badge {
-    font-family: $font-display;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.07);
-    color: $color-muted;
-
-    &.open {
-      background: rgba(58, 99, 66, 0.35);
-      color: #8fbc8f;
-    }
-  }
 </style>
