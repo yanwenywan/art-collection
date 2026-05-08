@@ -3,6 +3,6 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://yan.yanwenyuan.uk",
+  site: "https://art.yanwenyuan.uk",
   trailingSlash: "always",
 });
