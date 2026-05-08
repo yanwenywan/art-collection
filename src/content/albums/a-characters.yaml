@@ -26,10 +26,13 @@ images:
   - file: chars/ouyang-zhan.png
     title: 歐陽湛 Ouyang Zhan
     description: Qin master and leader of the Ouyang Sect, one of the strongest mages in the world. Eventually became a disciple of the Rain God, and ascended to immortality. Same generation as Star Venerable An Ye.
-    
+
   - file: chars/zuojia.jpg
     title: 作家 The Writer
     description: An Ye and her Dao Companion 姜藝 Jiang Yi, the 梧桐真仙 Wutong Immortal. As the stars control fate, so can it write the future, this is the most sinister and powerful ability of that house.
+
+  - file: chars/an-ye-jiang-yi.png
+    title: An Ye and Jiang Yi
   - file: chars/an-ye-chi-dao.png
     title: 安夜持刀 An Ye with Guandao
   - file: chars/guandao-po-tianjie.png
@@ -43,7 +46,7 @@ images:
     title: Hi~
   - file: chars/zichen-hongye.png
     title: An Zichen and Dongfang Hongye
-    description: fathers of An Ye and Dongfang Tianjie respectively. 
+    description: fathers of An Ye and Dongfang Tianjie respectively.
   - file: chars/four-houses.png
     title: Four dragon houses of the stars
     description: The four dragon clans of the Ancient Star Venerable. An Ye belongs to the northern branch (虛 Xu)
