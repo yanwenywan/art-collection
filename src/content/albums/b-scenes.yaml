@@ -1,3 +1,7 @@
 title: "神海景光 Caeleste Mare: Scenes and Illustrations"
 description: Various non-character illustrations
 cover: ./scenes/temple.png
+images:
+  - file: scenes/temple.png
+    title: Cangshan temple door
+    description: Mountains hide within mountains, heavens hide within heavens.
