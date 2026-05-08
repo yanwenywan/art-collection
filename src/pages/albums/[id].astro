@@ -160,6 +160,10 @@ if (overlay && lbImg && lbCap) {
         margin: 0 auto;
         columns: 3;
         column-gap: $gap;
+
+        @media (max-width: 768px) {
+            columns: 2;
+        }
     }
     figure {
         margin: 0 0 $gap 0;  // was margin: 0, need bottom gap now
