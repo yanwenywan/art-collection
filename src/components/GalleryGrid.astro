@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 const albums = await getCollection("albums");
@@ -12,11 +13,22 @@ const thumbColors = ["#2a3d2a", "#1f3028", "#263326", "#1c2b20"];
         albums.map((album, i) => (
             <a href={`/albums/${album.id}/`} class="gallery-item">
                 {/* TODO: replace div.thumb with <Image> once cover images are added */}
+                {console.log(typeof album.data.cover, album.data.cover)}
                 <div
                     class="thumb"
                     style={`background-color: ${thumbColors[i % thumbColors.length]}`}
                 >
-                    <span class="thumb-label">TODO: add cover image</span>
+                    {album.data.cover ? (
+                        <Image
+                            src={album.data.cover}
+                            alt={album.data.title}
+                            width={album.data.cover.width}
+                            height={album.data.cover.height}
+                            class="thumb-cover"
+                        />
+                    ) : (
+                        <span class="thumb-label">no cover</span>
+                    )}
                 </div>
                 <p class="title">{album.data.title}</p>
                 {album.data.description && (
@@ -46,15 +58,27 @@ const thumbColors = ["#2a3d2a", "#1f3028", "#263326", "#1c2b20"];
     }
 
     .thumb {
+        position: relative;
+        overflow: hidden;
         height: $gallery-row-height;
         border-radius: 4px;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: opacity 0.15s;
+    }
+
+    .thumb-cover {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        filter: brightness(0.75);
 
         .gallery-item:hover & {
-            opacity: 0.85;
+            transform: scale(1.05);
         }
     }
 
