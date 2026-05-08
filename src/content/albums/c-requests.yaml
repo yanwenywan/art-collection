@@ -5,14 +5,36 @@ images:
   - file: ./requests/silver-vampire.jpg
     title: Silver (vampire form)
     description: A blood sea rages under silver moon
+  - file: requests/wish.png
+    title: A wish
+    description: A scene from Sins of the Fire; featuring Mysherra and the eastern dragon Xusu.
+  - file: requests/long-yuzhao.jpg
+    title: 龍煜昭 Long Yuzhao (Variken)
   - file: requests/stret.jpg
     title: Stret
+  - file: requests/hourai.jpg
+    title: Torryn (Hourai)
+    description: Heart still as water.
   - file: requests/shin.jpg
     title: Shin (shadeii)
     description: At midnight the dragon walks, wind and rain calms. The barren mountains erupt in vermillion flowers.
+  - file: requests/sombra-noelle-tea.jpg
+    title: Tea in cloud recesses
+    description: Another tea piece at the behest of Sombra.
+  - file: requests/chase.jpg
+    title: Pera (Chase)
+  - file: requests/sombra.jpg
+    title: Sombra
+    description: Complete is the blazing sun, the light of all things!
+  - file: requests/daemy-koira.jpg
+    title: Koira (Light Daemy)
+    description: koi dragon.
   - file: requests/tea-sombra-xuanhai.jpg
     title: Tea above clouds
     description: A tea scene with Sombra and the Moon Venerable
+  - file: requests/thymm.png
+    title: Thymm (Stride)
+    description: Wind rides the boundless sea
   - file: requests/noelle-ryukuri.jpg
     title: Noelle (Ryukiri)
     description: Crossing the bridge I see the a sky dragon's shadow. Crimson spidier lilies grow underfoot.

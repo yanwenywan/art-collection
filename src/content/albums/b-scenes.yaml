@@ -2,6 +2,18 @@ title: "神海景光 Caeleste Mare: Scenes and Illustrations"
 description: Various non-character illustrations
 cover: ./scenes/temple.png
 images:
+  - file: scenes/xianqiao.png
+    title: 仙橋 The Immortal's Bridge
+    description: Poster for travelling the Immortal's Bridge from Shandu in the Great Xing to the capital of Zhang, Tianjing. Paid for by the tourism bureau of Zhang (張氏王朝觀光司). A thought of the cultivation world meeting the steam age. A floating rail bridge soaring into the Zhang capital, it demonstrates the ancient kingdom's ability and ingenuity.
   - file: scenes/temple.png
     title: Cangshan temple door
     description: Mountains hide within mountains, heavens hide within heavens.
+  - file: scenes/cangshan-xieli.png
+    title: 藏山邪禮 The unhallowed rites of Cangshan
+    description: A ritual that can let you be reborn as a true dragon--at the cost of another's life, and great risk to your own.
+  - file: scenes/taichuan-stylised.png
+    title: Taichuan Sun
+    description: Stylised vector drawing of sunset over Taichuan commandery in the west.
+  - file: scenes/lonely-maiden.png
+    title: The Lonely Maiden
+    description: An island off the coast of Ryvien. Stylised vector drawing. Text in draconic majuscule.

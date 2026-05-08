@@ -2,9 +2,24 @@ title: "神海人設 Caeleste Mare: Characters"
 description: Sketches and full drawings of characters
 cover: ./chars/moon-god-temple.jpg
 images:
+  - file: chars/yushen-ref.jpg
+    title: 月尊 参考图 The Moon Venerable (Reference)
+    description: Reference showcase of the Moon Venerable
+  - file: chars/dongfang-tianjie-ref.jpg
+    title: 東方天界 参考图 Dongfang Tianjie (Reference)
+    description: Second son of the late Marquis of Jiangxia, a carefree young soul (gay in all the definitions), and an avid martial artist. He likes to show off and be the centre of attention, and is sometimes affectionally known as the "Flower of Tianjing".
   - file: chars/qin-of-yan.jpg
     title: 燕欽王 King Qin of Yan
     description: given name 燕昕 Yan Xin, first emperor of the Yan dragon dynasty, which began 16,000 years of draconic rule.
   - file: chars/moon-god-temple.jpg
     title: 月尊雨神 Moon Venerable; Rain God
     description: given name 玄海 Xuanhai, lesser deity of the moon, also controls the rains, harvest, and dispels evil.
+  - file: chars/xingzun-temple.jpg
+    title: 無上星尊 The Supreme Venerable of the Stars
+    description: surname 安 An, given name 夜 Ye, lesser deity of the stars, second in the throne. She was born a mortal and ascended during the time of the human dynasty of Liao, and is the weakest of the lesser gods. The stars ordain fate, omens, and seasons, and is decidedly sinister in nature, despite An Ye herself being very kind in nature.
+  - file: chars/golmak.png
+    title: 死神 Golmak, former God of Death
+    description: "he tried to usurp a god and was struck down, now a shadow lurking in the dark, his power locked away. (Artist commentary: wasnt actually too happy with this piece, but it's growing on me somehow)"
+  - file: chars/ouyang-zhan.png
+    title: 歐陽湛 Ouyang Zhan
+    description: Qin master and leader of the Ouyang Sect, one of the strongest mages in the world. Eventually became a disciple of the Rain God, and ascended to immortality. Same generation as Star Venerable An Ye.
