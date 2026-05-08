@@ -1,3 +1,10 @@
 title: "神海人設 Caeleste Mare: Characters"
 description: Sketches and full drawings of characters
 cover: ./chars/moon-god-temple.jpg
+images:
+  - file: chars/qin-of-yan.jpg
+    title: 燕欽王 King Qin of Yan
+    description: given name 燕昕 Yan Xin, first emperor of the Yan dragon dynasty, which began 16,000 years of draconic rule.
+  - file: chars/moon-god-temple.jpg
+    title: 月尊雨神 Moon Venerable; Rain God
+    description: given name 玄海 Xuanhai, lesser deity of the moon, also controls the rains, harvest, and dispels evil.

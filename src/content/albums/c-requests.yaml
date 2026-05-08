@@ -5,3 +5,14 @@ images:
   - file: ./requests/silver-vampire.jpg
     title: Silver (vampire form)
     description: A blood sea rages under silver moon
+  - file: requests/stret.jpg
+    title: Stret
+  - file: requests/shin.jpg
+    title: Shin (shadeii)
+    description: At midnight the dragon walks, wind and rain calms. The barren mountains erupt in vermillion flowers.
+  - file: requests/tea-sombra-xuanhai.jpg
+    title: Tea above clouds
+    description: A tea scene with Sombra and the Moon Venerable
+  - file: requests/noelle-ryukuri.jpg
+    title: Noelle (Ryukiri)
+    description: Crossing the bridge I see the a sky dragon's shadow. Crimson spidier lilies grow underfoot.

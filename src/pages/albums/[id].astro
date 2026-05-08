@@ -1,0 +1,150 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+    const albums = await getCollection("albums");
+    return albums.map((album) => ({
+        params: { id: album.id },
+        props: { album },
+    }));
+}
+
+const { album } = Astro.props;
+const { title, description, images } = album.data;
+---
+
+<BaseLayout title={title}>
+    <div class="album-page-wrapper">
+
+    <header class="album-header">
+        <a href="/" class="back-pill">← Back</a>
+        <h1>{title}</h1>
+        {description && <p class="desc">{description}</p>}
+    </header>
+    <main class="album-page">
+
+        {
+            images && images.length > 0 ? (
+                <div class="image-grid">
+                    {images.map((img) => (
+                        <figure>
+                            <Image
+                                src={img.file}
+                                alt={img.title ?? ""}
+                                width={img.file.width}
+                                height={img.file.height}
+                            />
+                            {img.title && (
+                                <figcaption>
+                                    <strong>{img.title}.</strong>
+                                    {img.description && (
+                                        <span>{img.description}</span>
+                                    )}
+                                </figcaption>
+                            )}
+                        </figure>
+                    ))}
+                </div>
+            ) : (
+                <p class="empty">No images yet.</p>
+            )
+        }
+    </main>
+
+    </div>
+</BaseLayout>
+
+<style lang="scss">
+    @use "../../styles/tokens" as *;
+
+    .album-page-wrapper {
+      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .album-page {
+        padding: $gap;
+        /* max-width: 1200px; */
+        /* margin: 0 auto; */
+    }
+
+    .album-header {
+      background: $color-surface;
+      backdrop-filter: blur(8px);
+      padding: $gap * 1.5 $gap * 2;
+      margin-bottom: $gap * 2;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+
+      h1 {
+        font-family: $font-display;
+        font-weight: 700;
+        color: $color-text;
+        margin: 0;
+      }
+
+      .desc {
+        font-family: $font-body;
+        font-size: 0.85rem;
+        color: $color-muted;
+        line-height: 1.6;
+        margin: 0;
+      }
+    }
+
+    .back-pill {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      font-family: $font-display;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.25rem 0.75rem;
+      margin-bottom: 0.25rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.07);
+      color: $color-muted;
+      transition: background 0.15s, color 0.15s;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.12);
+        color: $color-text;
+      }
+    }
+
+    .image-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        columns: 3;
+        column-gap: $gap;
+    }
+    figure {
+        margin: 0 0 $gap 0;  // was margin: 0, need bottom gap now
+        break-inside: avoid;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        }
+        figcaption {
+            padding: 0.5rem 0;
+            font-family: $font-body;
+            font-size: 0.8rem;
+            color: $color-muted;
+            strong {
+                color: $color-text;
+            }
+        }
+    }
+    .empty {
+        color: $color-muted;
+        font-family: $font-body;
+    }
+</style>
