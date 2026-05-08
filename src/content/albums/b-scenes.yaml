@@ -11,9 +11,15 @@ images:
   - file: scenes/cangshan-xieli.png
     title: 藏山邪禮 The unhallowed rites of Cangshan
     description: A ritual that can let you be reborn as a true dragon--at the cost of another's life, and great risk to your own.
+  - file: scenes/qingyan-fan.png
+    title: 青焰扇 Azure Flame Fan
+    description: The magical treasure of 青焰子 Qingyanzi, an ancient transforming force cultivator during the Yan era. When he was killed by 歐陽坤 Ouyang Kun to avenge his grandson, the fan was lost and never discovered again.
   - file: scenes/taichuan-stylised.png
     title: Taichuan Sun
     description: Stylised vector drawing of sunset over Taichuan commandery in the west.
   - file: scenes/lonely-maiden.png
     title: The Lonely Maiden
     description: An island off the coast of Ryvien. Stylised vector drawing. Text in draconic majuscule.
+  - file: scenes/lanhuating.png
+    title: 蘭花亭 Orchid Pavillion
+    description: The sect headquarters and clan home of the 蘭 Lan clan of 靜塢 Jingwu, Damak.

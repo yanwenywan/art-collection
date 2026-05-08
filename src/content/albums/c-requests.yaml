@@ -5,6 +5,9 @@ images:
   - file: ./requests/silver-vampire.jpg
     title: Silver (vampire form)
     description: A blood sea rages under silver moon
+  - file: requests/an-mys-1.png
+    title: An Ye and Mysherra
+    description: Some non-canon yuri, for fun :)
   - file: requests/wish.png
     title: A wish
     description: A scene from Sins of the Fire; featuring Mysherra and the eastern dragon Xusu.
@@ -21,6 +24,8 @@ images:
   - file: requests/sombra-noelle-tea.jpg
     title: Tea in cloud recesses
     description: Another tea piece at the behest of Sombra.
+  - file: requests/scotch.jpg
+    title: Topaz (Butterscotch)
   - file: requests/chase.jpg
     title: Pera (Chase)
   - file: requests/sombra.jpg

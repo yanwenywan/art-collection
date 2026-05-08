@@ -17,9 +17,59 @@ images:
   - file: chars/xingzun-temple.jpg
     title: 無上星尊 The Supreme Venerable of the Stars
     description: surname 安 An, given name 夜 Ye, lesser deity of the stars, second in the throne. She was born a mortal and ascended during the time of the human dynasty of Liao, and is the weakest of the lesser gods. The stars ordain fate, omens, and seasons, and is decidedly sinister in nature, despite An Ye herself being very kind in nature.
+  - file: chars/yuan-mengwu.jpg
+    title: 夢雲道人元夢吾 Mengyun Daoist Yuan Mengwu
+    description: (Torrential Rains timeline) Yuan Mengwu, nascent soul elder of the 星府龍宮 House of Stars Dragon Palace, heart cultivator.
   - file: chars/golmak.png
     title: 死神 Golmak, former God of Death
     description: "he tried to usurp a god and was struck down, now a shadow lurking in the dark, his power locked away. (Artist commentary: wasnt actually too happy with this piece, but it's growing on me somehow)"
   - file: chars/ouyang-zhan.png
     title: 歐陽湛 Ouyang Zhan
     description: Qin master and leader of the Ouyang Sect, one of the strongest mages in the world. Eventually became a disciple of the Rain God, and ascended to immortality. Same generation as Star Venerable An Ye.
+    
+  - file: chars/zuojia.jpg
+    title: 作家 The Writer
+    description: An Ye and her Dao Companion 姜藝 Jiang Yi, the 梧桐真仙 Wutong Immortal. As the stars control fate, so can it write the future, this is the most sinister and powerful ability of that house.
+  - file: chars/an-ye-chi-dao.png
+    title: 安夜持刀 An Ye with Guandao
+  - file: chars/guandao-po-tianjie.png
+    title: Guandao
+  - file: chars/an-ye-blep.png
+    title: An Ye
+  - file: chars/jingshui-sketch.png
+    title: 井水不犯河水 Well water does not interfere with river water
+    description: Gods of man do not interfere with Gods of dragons! Xuanhai fighting the gods of man, torrential rains timeline.
+  - file: chars/hao.png
+    title: Hi~
+  - file: chars/zichen-hongye.png
+    title: An Zichen and Dongfang Hongye
+    description: fathers of An Ye and Dongfang Tianjie respectively. 
+  - file: chars/four-houses.png
+    title: Four dragon houses of the stars
+    description: The four dragon clans of the Ancient Star Venerable. An Ye belongs to the northern branch (虛 Xu)
+  - file: chars/jiang-yi.jpg
+    title: 姜藝 Jiang Yi (comic)
+    description: Comic introducing the Wutong Daoist Jiang Yi.
+  - file: chars/yijia.png
+    title: 一家仙歌長 Happy Family
+    description: An Ye, Jiang Yi, and Jiang Yi's crane-demon disciple 仙靈 Xianling.
+  - file: chars/wenqin.png
+    title: 聞琴 Listening to Qin
+  - file: chars/zhenxiang.jpg
+    title: 真相 True Form
+    description: As a grown dragon and lesser deity, An Ye is actually quite large. Usually though, she shrinks her form to more conveniently move around in normal life.
+  - file: chars/snarl.png
+    title: An Ye Snarl
+  - file: chars/jiang-yi-cat.jpg
+    title: 姜藝親愛的大貓咪 Jiang Yi's beloved big cat
+  - file: chars/reading.jpg
+    title: Reading
+  - file: chars/niannianyouyu.jpg
+    title: 年年有餘 May your years be plenty
+    description: 2026 Year of the Horse.
+  - file: chars/identity-2-cn.png
+    title: Identity
+    description: Introduces 姜林 Jiang Lin, Jiang Yi's son, and 蘭之禮 Lan Zhili, from the Lan clan of Jingwu.
+  - file: chars/dftj.png
+    title: 少主東方 Young Lord Dongfang
+    description: Dongfang Tianjie.
