@@ -27,6 +27,10 @@ import Avatar from './Avatar.astro';
       My setting is called <em>Caeleste Mare</em> (The Celestial Sea; 神海).
       Most pictures come from this world.
   </p>
+  <div class="copyright">
+    <hr/>
+    <p>© Yanwenyuan · All rights reserved · No redistribution · No use in AI</p>
+  </div>
 </div>
 
 <style lang="scss">
@@ -96,6 +100,27 @@ import Avatar from './Avatar.astro';
     font-size: 0.85rem;
     color: $color-muted;
     line-height: 1.6;
+  }
+
+  .copyright {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+
+    hr {
+      width: 100%;
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-family: $font-body;
+      font-size: 0.65rem;
+      color: $color-muted;
+      opacity: 0.6;
+      line-height: 1.4;
+    }
   }
 
 </style>
