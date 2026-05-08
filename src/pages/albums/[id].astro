@@ -16,13 +16,20 @@ const { title, description, images } = album.data;
 ---
 
 <BaseLayout title={title}>
+
     <div class="album-page-wrapper">
+
+    <div class="lightbox-overlay" id="lightbox">
+        <img id="lightbox-img" src="" alt="" />
+        <figcaption id="lightbox-caption"></figcaption>
+    </div>
 
     <header class="album-header">
         <a href="/" class="back-pill">← Back</a>
         <h1>{title}</h1>
         {description && <p class="desc">{description}</p>}
     </header>
+
     <main class="album-page">
 
         {
@@ -55,6 +62,36 @@ const { title, description, images } = album.data;
 
     </div>
 </BaseLayout>
+
+<script>
+
+const overlay = document.getElementById('lightbox') as HTMLDivElement | null;
+const lbImg   = document.getElementById('lightbox-img') as HTMLImageElement | null;
+const lbCap   = document.getElementById('lightbox-caption') as HTMLElement | null;
+
+if (overlay && lbImg && lbCap) {
+  document.querySelectorAll<HTMLImageElement>('.image-grid figure img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      const cap = img.closest('figure')?.querySelector('figcaption');
+      lbCap.innerHTML = cap?.innerHTML ?? '';
+      overlay.classList.add('active');
+    });
+  });
+
+  overlay.addEventListener('click', (e: MouseEvent) => {
+    if (e.target !== lbImg) overlay.classList.remove('active');
+  });
+
+  document.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.key === 'Escape') overlay.classList.remove('active');
+  });
+}
+
+</script>
+
 
 <style lang="scss">
     @use "../../styles/tokens" as *;
@@ -146,5 +183,40 @@ const { title, description, images } = album.data;
     .empty {
         color: $color-muted;
         font-family: $font-body;
+    }
+
+    .lightbox-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 1000;
+        cursor: zoom-out;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;  // stack image + caption vertically
+        gap: 1rem;
+        padding: 2rem;
+
+        &.active {
+            display: flex;
+        }
+
+        img {
+            max-width: 90vw;
+            max-height: 80vh;  // reduced from 90vh to leave room for caption
+            object-fit: contain;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
+            cursor: default;
+        }
+
+        figcaption {
+            // remove position: absolute, bottom, left, transform
+            text-align: center;
+            font-family: $font-body;
+            font-size: 0.9rem;
+            color: $color-muted;
+            strong { color: $color-text; }
+        }
     }
 </style>
