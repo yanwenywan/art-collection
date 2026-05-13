@@ -31,6 +31,11 @@ images:
     title: 作家 The Writer
     description: An Ye and her Dao Companion 姜藝 Jiang Yi, the 梧桐真仙 Wutong Immortal. As the stars control fate, so can it write the future, this is the most sinister and powerful ability of that house.
 
+  - file: chars/yinyufanfei.png
+    title: 銀羽翻飛 Silver feathers flying
+    description: Small drawing of the Moon Venerable writing calligraphy with Silver's wing feather quill.
+  - file: chars/shai-canghai-sketch.png
+    title: 月尊幼弟 given name 滄海, the younger of two brothers, who was banished to Qara Qai. Also known as the feathered god.
   - file: chars/an-ye-jiang-yi.png
     title: An Ye and Jiang Yi
   - file: chars/an-ye-chi-dao.png
