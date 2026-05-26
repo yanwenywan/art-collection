@@ -30,10 +30,16 @@ images:
     title: 歐陽湛 Ouyang Zhan
     description: Qin master and leader of the Ouyang Sect, one of the strongest mages in the world. Eventually became a disciple of the Rain God, and ascended to immortality. Same generation as Star Venerable An Ye.
 
+  - file: chars/wen-qin.jpg
+    title: 聞琴 Listening to Qin (redraw)
+    description: Redraw for new style
   - file: chars/zuojia.jpg
     title: 作家 The Writer
     description: An Ye and her Dao Companion 姜藝 Jiang Yi, the 梧桐真仙 Wutong Immortal. As the stars control fate, so can it write the future, this is the most sinister and powerful ability of that house.
 
+  - file: chars/star-venerable-ceremonial-dress-alt.png
+    title: Ceremonial royal dress of the Star Venerable
+    description: Design concept.
   - file: chars/yinyufanfei.png
     title: 銀羽翻飛 Silver feathers flying
     description: Small drawing of the Moon Venerable writing calligraphy with Silver's wing feather quill.

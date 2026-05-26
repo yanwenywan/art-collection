@@ -2,6 +2,18 @@ title: 委 Requests and Other People
 description: Drawings for and of other people's characters, &c. All characters belong to their owners, I am but the artist.
 cover: ./requests/silver-vampire.jpg
 images:
+  - file: requests/lumi-stare.png
+    title: Lumi Stare
+    description: sticker
+  - file: requests/poem-portrait.png
+    title: Poem
+    description: Headshot for poem
+  - file: requests/vividg.png
+    title: Vivian Headshot
+  - file: requests/sorb.png
+    title: Sorb (Silver-owl-orb)
+  - file: requests/sowl.png
+    title: Silver as an owl
   - file: requests/topaz-an.jpg
     title: Topaz (butterscotchy) and An Ye
     description: "Showing him around the island :)"
