@@ -9,3 +9,6 @@ images:
     description: Unnamed character design that I drew. Now being used by Hourai.
   - file: etc/rock.png
     title: Rock
+  - file: etc/enoh/png
+    title: Enoh (lineless)
+    description: A Mriajamo purple enoh based on one of her concepts.
