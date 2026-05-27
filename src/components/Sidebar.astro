@@ -16,11 +16,15 @@ import Avatar from './Avatar.astro';
         <iconify-icon icon="ph:globe" width="14" height="14" />
         <span>website</span>
       </a>
+      <span class="sep">|</span>
+      <a href="https://ko-fi.com/yanxin" class="social-link" target="_blank" rel="noopener noreferrer">
+        <iconify-icon icon="simple-icons:kofi" width="14" height="14" />
+        <span>kofi</span>
+      </a>
     </div>
   </div>
   <hr/>
   <p class="bio">
-    <!-- TODO: add real bio -->
     Digital art of mostly dragons. I also write in Classical Chinese and worldbuild sometimes.
   </p>
   <p class="bio">
@@ -66,6 +70,8 @@ import Avatar from './Avatar.astro';
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .social-link {
