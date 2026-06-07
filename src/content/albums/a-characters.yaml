@@ -11,6 +11,13 @@ images:
   - file: chars/dongfang-tianjie-ref.jpg
     title: 東方天界 参考图 Dongfang Tianjie (Reference)
     description: Second son of the late Marquis of Jiangxia, a carefree young soul (gay in all the definitions), and an avid martial artist. He likes to show off and be the centre of attention, and is sometimes affectionally known as the "Flower of Tianjing".
+
+  - file: ./chars/yan-wen.jpg
+    title: 悟玄真仙燕文 The Wuxuan Immortal, Yan Wen
+    description: Yan Wen, second prince of Yan, son of Yan Xin. Retreated into seclusion and became a disciple of the moon venerable.
+  - file: chars/xuanyang.jpg
+    title: 玄陽 Xuanyang
+    description: King of the eastern sea in the elven plane, tyrant above all dragonkind
   - file: chars/qin-of-yan.jpg
     title: 燕欽王 King Qin of Yan
     description: given name 燕昕 Yan Xin, first emperor of the Yan dragon dynasty, which began 16,000 years of draconic rule.
@@ -30,6 +37,9 @@ images:
     title: 歐陽湛 Ouyang Zhan
     description: Qin master and leader of the Ouyang Sect, one of the strongest mages in the world. Eventually became a disciple of the Rain God, and ascended to immortality. Same generation as Star Venerable An Ye.
 
+  - file: chars/yuan-mengwu-fan.png
+    title: 元夢吾 Yuan Mengwu
+    description: Alternate drawing of Yuan Mengwu
   - file: chars/wen-qin.jpg
     title: 聞琴 Listening to Qin (redraw)
     description: Redraw for new style
@@ -37,10 +47,18 @@ images:
     title: 作家 The Writer
     description: An Ye and her Dao Companion 姜藝 Jiang Yi, the 梧桐真仙 Wutong Immortal. As the stars control fate, so can it write the future, this is the most sinister and powerful ability of that house.
 
+  - file: chars/an-ye-hug.png
+    title: An Ye hugging Jiang Yi
+  - file: chars/mengwu-tail-spear-xuankongfang-sketch.png
+    title: 夢吾進攻懸空坊 Mengwu Attacks Xuankongfang
+    description: Yuan Mengwu leading an attack against the demonic sect at Xuankongfang (the "floating market"). Torrential Rains timeline.
+  - file: chars/xuanhai-exhale.png
+    title: 吐仙雲 Breathing clouds
+  - file: chars/star-venerable-dress-3rd.png
+    title: Ceremonial royal dress of the Star Venerable (second drawing)
   - file: chars/star-venerable-ceremonial-dress-alt.png
     title: Ceremonial royal dress of the Star Venerable
     description: Design concept.
-
   - file: chars/feather-crown-canghai.png
     title: Alt sketch of Canghai
     description: Shows the feather crown better
