@@ -2,6 +2,9 @@ title: "神海人設 Caeleste Mare: Characters"
 description: Sketches and full drawings of original characters from CM
 cover: ./chars/moon-god-temple.jpg
 images:
+  - file: chars/yuan-mengwu-ref.jpg
+    title: 夢雲道人 元夢吾 Mengyun Taoist Yuan Mengwu (Reference)
+    description: Reference showcase for Yuan Mengwu, elder of the House of Stars, heart cultivator, widely regarded as the most enchanting person in the entire sect.
   - file: chars/an-ye-ref.jpg
     title: 星尊安夜 參考圖 The Star Venerable An Ye (Reference)
     description: Reference showcase of the Star Venerable An Ye, descendant of the "Night River" bloodline--the northern House of Xu 虛.
@@ -50,6 +53,9 @@ images:
     title: 作家 The Writer
     description: An Ye and her Dao Companion 姜藝 Jiang Yi, the 梧桐真仙 Wutong Immortal. As the stars control fate, so can it write the future, this is the most sinister and powerful ability of that house.
 
+  - file: chars/zhang-tai-array.png
+    title: 張泰施陣法 Zhang Tai performing formation magic
+    description: Zhang Tai the second prince of Zhang, founder of the 理術 Naturalist system
   - file: chars/an-ye-hug.png
     title: An Ye hugging Jiang Yi
   - file: chars/mengwu-tail-spear-xuankongfang-sketch.png
