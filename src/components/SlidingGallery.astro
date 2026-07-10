@@ -1,0 +1,89 @@
+<div class="sg-lightbox-overlay" id="sg-lightbox">
+    <img id="sg-lightbox-img" src="" alt="" />
+</div>
+
+<div class="sg-bleed">
+    <div class="sliding-gallery">
+        <slot />
+    </div>
+</div>
+
+<script>
+const overlay = document.getElementById('sg-lightbox') as HTMLDivElement | null;
+const lbImg   = document.getElementById('sg-lightbox-img') as HTMLImageElement | null;
+
+if (overlay && lbImg) {
+    document.querySelectorAll<HTMLImageElement>('.sliding-gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+            lbImg.src = img.src;
+            lbImg.alt = img.alt;
+            overlay.classList.add('active');
+        });
+    });
+    overlay.addEventListener('click', (e: MouseEvent) => {
+        if (e.target !== lbImg) overlay.classList.remove('active');
+    });
+    document.addEventListener('keydown', (e: KeyboardEvent) => {
+        if (e.key === 'Escape') overlay.classList.remove('active');
+    });
+}
+</script>
+
+<style lang="scss">
+    @use "../styles/tokens" as *;
+
+    .sg-bleed {
+        width: calc(100% + $gap * 5);
+        margin-left: calc($gap * -2.5);
+        margin-right: calc($gap * -2.5);
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: thin;
+        background: $color-surface;
+        margin-top: $gap;
+        margin-bottom: $gap;
+    }
+
+    .sliding-gallery {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: $gap;
+        padding: $gap;
+        height: 280px;
+        width: max-content;
+    }
+
+    :global(.sliding-gallery img) {
+        height: 100%;
+        width: auto;
+        max-width: none;
+        cursor: zoom-in;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        flex-shrink: 0;
+    }
+
+    .sg-lightbox-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 1000;
+        cursor: zoom-out;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+
+        &.active {
+            display: flex;
+        }
+
+        img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
+            cursor: default;
+        }
+    }
+</style>
