@@ -1,0 +1,27 @@
+---
+---
+<span class="pill"><slot /></span>
+
+<style lang="scss">
+    @use "../styles/tokens" as *;
+
+    .pill {
+        display: inline-flex;
+        align-items: center;
+        font-family: $font-display;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.07);
+        color: $color-muted;
+        transition: background 0.15s, color 0.15s;
+
+        :global(.pill-link):hover & {
+            background: rgba(255, 255, 255, 0.12);
+            color: $color-text;
+        }
+    }
+</style>

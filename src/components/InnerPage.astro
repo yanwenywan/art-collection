@@ -1,0 +1,59 @@
+---
+import Pill from "./Pill.astro";
+
+interface Props {
+    title: string;
+    backHref?: string;
+    description?: string;
+}
+const { title, backHref = "/", description } = Astro.props;
+---
+
+<div class="inner-page">
+    <header class="page-header">
+        <a href={backHref} class="pill-link"><Pill>← Back</Pill></a>
+        <h1>{title}</h1>
+        {description && <p class="desc">{description}</p>}
+    </header>
+    <slot />
+</div>
+
+<style lang="scss">
+    @use "../styles/tokens" as *;
+
+    .inner-page {
+        min-height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .page-header {
+        background: $color-surface;
+        backdrop-filter: blur(8px);
+        padding: $gap * 1.5 $gap * 2;
+        margin-bottom: $gap * 2;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+
+        h1 {
+            font-family: $font-display;
+            font-weight: 700;
+            color: $color-text;
+            margin: 0;
+        }
+
+        .desc {
+            font-family: $font-body;
+            font-size: 0.85rem;
+            color: $color-muted;
+            line-height: 1.6;
+            margin: 0;
+        }
+    }
+
+    .pill-link {
+        text-decoration: none;
+        align-self: flex-start;
+        margin-bottom: 0.25rem;
+    }
+</style>

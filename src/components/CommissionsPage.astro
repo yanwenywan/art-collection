@@ -1,0 +1,25 @@
+---
+import InnerPage from "./InnerPage.astro";
+---
+
+<InnerPage title="Commissions" description="Information on commissions and guideline prices. WIP secret page shhh">
+    <div class="content-body">
+        <slot />
+    </div>
+</InnerPage>
+
+<style lang="scss">
+    @use "../styles/tokens" as *;
+
+    .content-body {
+        max-width: 840px;
+        width: 90%;
+        margin: 0 auto;
+        padding: $gap * 2 $gap * 2.5 $gap * 3;
+        font-family: $font-body;
+        color: $color-text;
+        line-height: 1.7;
+        background: $color-page;
+        border-radius: 4px;
+    }
+</style>
