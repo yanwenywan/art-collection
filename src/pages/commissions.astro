@@ -1,30 +1,200 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CommissionsPage from "../components/CommissionsPage.astro";
-import Pill from "../components/Pill.astro"
+import Pill from "../components/Pill.astro";
 ---
 
 <BaseLayout title="Commissions Information">
     <CommissionsPage>
-        <Pill>Commissions Closed</Pill>
+        <Pill>Commissions: Closed</Pill>
 
         <h2>Prices</h2>
 
         <p>
+            All prices are <i>guidelines</i>, they can be more or less depending
+            on complexity of scene, complexity of characters, number of
+            characters, &c. Contact me on discord to talk more (if we're not
+            already friends, please state in your message (a) where you came
+            from, and (b) that you'd like a commission)
         </p>
-            All prices are <i>guidelines</i>, they can be more or less depending on complexity of scene, complexity of characters, number of characters, &c.
+
+        <hr />
 
         <h2>TOS</h2>
 
-        <h3>Content</h3>
+        <h3>Eligibility</h3>
 
+        <p>18+</p>
+        <p>
+            Further to this, I reserve the right to say no to anyone and
+            anything without reason.
+        </p>
+
+        <h3>Content</h3>
+        <p>No NSFW.</p>
+        <hr />
+        <p>What I will (✓) / may consider (∼) / won't (✕) draw:</p>
+        <table>
+            <thead>
+                <tr>
+                    <td>✓</td>
+                    <td >Dragons!<br />✕ Night furies / HTTYD<br />✕ Humanoid (anthro) dragons</td >
+                </tr>
+            </thead >
+            <tbody>
+                <tr>
+                    <td>✓</td>
+                    <td>Other fantasy creatures (varies, best-effort basis)</td>
+                </tr>
+                <tr>
+                    <td>✓</td>
+                    <td>Backgrounds! Scenery!</td>
+                </tr>
+                <tr>
+                    <td>✓</td>
+                    <td >General blood and violence (no detailed insides or gore)</td >
+                </tr>
+                <tr>
+                    <td>~</td>
+                    <td >Extensive background architecture (I'm working on this, so probably yes)</td >
+                </tr>
+                <tr>
+                    <td>~</td>
+                    <td>Humans or humanoid like elves, etc</td>
+                </tr>
+                <tr>
+                    <td>~</td>
+                    <td>Mechanical things, mechs, intricate buildings</td>
+                </tr>
+                <tr>
+                    <td>~</td>
+                    <td>Dinos, probably</td>
+                </tr>
+                <tr>
+                    <td>~</td>
+                    <td >AI references, only if that's all you have and you want a real drawing of your OC. It has to be a redraw, I won't fix AI art directly.</td >
+                </tr>
+                <tr>
+                    <td>✕</td>
+                    <td>Guts and gore</td>
+                </tr>
+                <tr>
+                    <td>✕</td>
+                    <td>Fandom characters and fandom ships</td>
+                </tr>
+                <tr>
+                    <td>✕</td>
+                    <td>Anthropomorphic animals</td>
+                </tr>
+                <tr>
+                    <td>✕</td>
+                    <td >Most other animal-based OCs (though a dragon holding a sheep is fine)</td >
+                </tr>
+                <tr>
+                    <td>✕</td>
+                    <td >Anything politically charged, hateful, exclusionary, or that I deem inappropriate</td >
+                </tr>
+            </tbody>
+        </table>
+        
+        <hr />
+        
+        <p>Note:</p>
         <ul>
             <li>
-                Uhh
+                If you want to include someone else's character, <b >you need their permission first</b >.
             </li>
+            <li>
+                I'm confident drawing dragons, less so everything else. Everything is on best-effort basis, and you're not entitled to a refund if you talk me into drawing e.g. a human and it turns out a bit subpar.
+            </li>
+            <li>Lineless rendering is on a whim, please don't request it.</li>
         </ul>
 
-        <h3>Payment and Changes</h3>
+        <h3>Process</h3>
         
+        <p>(Rough draft)</p>
+        
+        <p> <b >I reserve the right to turn down any commission without reason.</b > </p>
+        
+        <p>
+            You can describe a scene, or leave it to my judgment based on your
+            character's lore or vibe.
+        </p>
+        
+        <p>
+            Please send image references. A full refsheet is best, a coloured
+            sketch works too, but I'll be extrapolating for anything not shown.
+        </p>
+        <hr />
+        <ul>
+            <li>Composition: I'll send one or a few rough sketches first.</li>
+            <li>
+                Sketch: Small tweaks (pose, props) are unlimited, within reason.
+                Bigger changes aren't recommended, but I'll allow one or two.
+            </li>
+            <li>
+                Line + Colour: Corrections aren't allowed here unless I clearly
+                got something wrong (e.g. missed a colour) per your references.
+            </li>
+        </ul>
+        <hr />
+        <p>
+            I don't work to deadlines or a strict queue, though I'll roughly
+            follow order. Personal drawings may be mixed in.
+        </p>
+        <h3>Payment</h3>
+        <p>Pay through Ko-fi, link on my homepage.</p>
+        <p>
+            Pay in full after the composition stage, before I start the proper
+            sketch.
+        </p>
+        <p>If <b>I</b> decide to drop a commission, you get a full refund.</p>
+        <p>
+            If <b>YOU</b> cancel before I start line + colour, I'll refund 50% or
+            more depending on work already done. <b >After I start line + colour, no refunds.</b >
+        </p>
+        <h3>Usage</h3>
+        <p>You can post, share, and use the art personally.</p>
+        <p>
+            I'll also post it on my site or socials by default--tell me if you'd
+            like it kept private.
+        </p>
+        <p>
+            Commercial use is fine as long as you're not selling the art itself
+            (using it on a storefront, profile, or logo is fine; prints, merch,
+            or NFTs are not). Do not feed it into AI tools.
+        </p>
+        <p>Keep my seal on the art and credit me as the artist when sharing.</p>
+        <p>
+            Edits by you are fine, as long as you keep the credit and don't run
+            it through AI image generation.
+        </p>
+
+        <style lang="scss">
+            @use "../styles/tokens" as *;
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: $gap * 0.75;
+            }
+
+            td {
+                padding: 0.6rem 0.9rem;
+                vertical-align: top;
+                text-align: left;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            }
+
+            td:first-child {
+                width: 2.5rem;
+                white-space: nowrap;
+                color: $color-muted;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+        </style>
     </CommissionsPage>
 </BaseLayout>

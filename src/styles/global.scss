@@ -29,16 +29,27 @@ a {
   color: $color-accent;
 }
 
+p {
+  margin-bottom: 0.75em;
+}
+
 ul, ol {
   padding-left: 1.5rem;
 }
 
 h2 {
-  margin-top: $gap * 1.5;
+  margin-top: $gap;
 }
 
 h3 {
-  margin-top: $gap;
+  margin-top: $gap * 0.75;
+  
+}
+
+hr {
+    margin: 1em 0;
+    border: 0;
+    border-top: 1px solid $color-accent;
 }
 
 // Fixed blurred background — sits behind all content
