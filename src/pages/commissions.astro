@@ -1,23 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CommissionsPage from "../components/CommissionsPage.astro";
+import ContentPage from "../components/ContentPage.astro";
 import Pill from "../components/Pill.astro";
 import SlidingGallery from "../components/SlidingGallery.astro";
 import { Image } from "astro:assets";
 ---
 
 <BaseLayout title="Commissions Information">
-    <CommissionsPage>
+    <ContentPage title="Commissions"
+                 description="Information on commissions and guideline prices. Always read the ToS.">
         <Pill>Commissions: Closed</Pill>
 
-        <p><pre>DRAFT PREVIEW. NOTHING IS FINAL. COMMISSIONS ARE NOT PUBLICLY OPEN.</pre></p>
+        <p>DRAFT PREVIEW. NOTHING IS FINAL.</p>
 
         <h2>Prices</h2>
 
         <p>
             All prices are <i>guidelines</i>, they can be more or less depending
             on complexity of scene, complexity of characters, number of
-            characters, &c. Prices in GBP. 
+            characters, &c. Prices in GBP.
         </p>
         <p>
             I don't flat-colour so everything includes some level of shading.
@@ -68,7 +69,7 @@ import { Image } from "astro:assets";
         </SlidingGallery>
         <p>Complex Backgrounds examples:</p>
         <SlidingGallery>
-            
+
             <Image src={import("../content/albums/requests/gwydien.jpg")} alt="Gwydien - complex scene"></Image>
             <Image src={import("../content/albums/requests/mekanip-rock.png")}  alt="Mekanip on a rock - complex scene"></Image>
             <Image src={import("../content/albums/requests/topaz-an.jpg")} alt="Topaz and An"></Image>
@@ -92,7 +93,7 @@ import { Image } from "astro:assets";
             <Image src={import("../content/albums/requests/szen-headshot.png")} alt="szen"></Image>
             <Image src={import("../content/albums/requests/vioportrait.png")} alt="vio"></Image>
         </SlidingGallery>
-        
+
         <hr />
 
         <h2>TOS</h2>
@@ -171,9 +172,9 @@ import { Image } from "astro:assets";
                 </tr>
             </tbody>
         </table>
-        
+
         <hr />
-        
+
         <p>Note:</p>
         <ul>
             <li>
@@ -187,14 +188,14 @@ import { Image } from "astro:assets";
         </ul>
 
         <h3>Process</h3>
-        
+
         <p> <b >I reserve the right to turn down any commission without reason.</b > </p>
-        
+
         <p>
             You can describe a scene, or leave it to my judgment based on your
             character's lore or vibe.
         </p>
-        
+
         <p>
             Please send image references. A full refsheet is best, a coloured
             sketch works too, but I'll be extrapolating for anything not shown.
@@ -270,5 +271,5 @@ import { Image } from "astro:assets";
                 border-bottom: none;
             }
         </style>
-    </CommissionsPage>
+    </ContentPage>
 </BaseLayout>

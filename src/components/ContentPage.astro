@@ -1,8 +1,15 @@
 ---
 import InnerPage from "./InnerPage.astro";
+
+interface Props {
+    title: string;
+    backHref?: string;
+    description?: string;
+}
+const { title, backHref = "/", description } = Astro.props;
 ---
 
-<InnerPage title="Commissions" description="Information on commissions and guideline prices. WIP secret page shhh">
+<InnerPage title={title} description={description} backHref={backHref}>
     <div class="content-body">
         <slot />
     </div>
@@ -21,5 +28,9 @@ import InnerPage from "./InnerPage.astro";
         line-height: 1.7;
         background: $color-page;
         border-radius: 4px;
+
+        @media screen and (max-width: 768px) {
+            padding: $gap * 2 $gap $gap * 3;
+        }
     }
 </style>
