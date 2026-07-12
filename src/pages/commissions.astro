@@ -11,7 +11,7 @@ import { Image } from "astro:assets";
                  description="Information on commissions and guideline prices. Always read the ToS.">
         <Pill>Commissions: Closed</Pill>
 
-        <p>DRAFT PREVIEW. NOTHING IS FINAL.</p>
+        <p style="font-family: monospace; margin-top: 1em;"># DRAFT PREVIEW. NOTHING IS FINAL.</p>
 
         <h2>Prices</h2>
 
@@ -29,23 +29,7 @@ import { Image } from "astro:assets";
             from, and (b) that you'd like a commission)
         </p>
 
-        <h3>Reference Sheet</h3>
 
-        <p><i>LIMITED. Not usually open.</i></p>
-
-        <p>
-            <b>£250.</b> (starting from): One "showcase" pose, 1-2 other fullbodies, 3-4 headshots, claws, tail, etc cutouts. Watercolour background, possible simple decoration.
-        </p>
-
-        <p>Surcharge for Complex characters, extra poses.</p>
-
-        <p>Complimentary titles and/or text, Chinese and/or English. </p>
-
-        <SlidingGallery>
-            <Image src={import("../content/albums/requests/toast-ref.jpg")} alt="toastRef"></Image>
-            <Image src={import("../content/albums/chars/yuan-mengwu-ref.jpg")} alt="yuan mengwu ref"></Image>
-            <Image src={import("../content/albums/chars/an-ye-ref.jpg")} alt="an ye ref"></Image>
-        </SlidingGallery>
 
         <h3>Fullbody with Scene</h3>
 
@@ -94,6 +78,24 @@ import { Image } from "astro:assets";
             <Image src={import("../content/albums/requests/vioportrait.png")} alt="vio"></Image>
         </SlidingGallery>
 
+        <h3>Reference Sheet</h3>
+
+        <p><i>LIMITED. Not usually open.</i></p>
+
+        <p>
+            <b>£250.</b> (starting from): One "showcase" pose, 1-2 other fullbodies, 3-4 headshots, claws, tail, etc cutouts. Watercolour background, possible simple decoration.
+        </p>
+
+        <p>Surcharge for Complex characters, extra poses.</p>
+
+        <p>Complimentary titles and/or text, Chinese and/or English. </p>
+
+        <SlidingGallery>
+            <Image src={import("../content/albums/requests/toast-ref.jpg")} alt="toastRef"></Image>
+            <Image src={import("../content/albums/chars/yuan-mengwu-ref.jpg")} alt="yuan mengwu ref"></Image>
+            <Image src={import("../content/albums/chars/an-ye-ref.jpg")} alt="an ye ref"></Image>
+        </SlidingGallery>
+
         <hr />
 
         <h2>TOS</h2>
@@ -132,7 +134,7 @@ import { Image } from "astro:assets";
                 </tr>
                 <tr>
                     <td>~</td>
-                    <td >Extensive background architecture (I'm working on this, so probably yes)</td >
+                    <td >Extensive background architecture or intricate scenery (I'm working on this, so probably)</td >
                 </tr>
                 <tr>
                     <td>~</td>
@@ -140,7 +142,7 @@ import { Image } from "astro:assets";
                 </tr>
                 <tr>
                     <td>~</td>
-                    <td>Mechanical things, mechs, intricate buildings</td>
+                    <td>Mechanical things, mechs, complex buildings</td>
                 </tr>
                 <tr>
                     <td>~</td>
@@ -184,7 +186,7 @@ import { Image } from "astro:assets";
                 I'm confident drawing dragons, less so everything else. Everything is on best-effort basis, and you're not entitled to a refund if you talk me into drawing e.g. a human and it turns out a bit subpar.
             </li>
             <li>Lineless rendering is on a whim, please don't request it.</li>
-            <li>If you're not sure if I'll draw something, no harm in asking!</li>
+            <li>List is not exhaustive. If you're not sure if I'll draw something, no harm in asking!</li>
         </ul>
 
         <h3>Process</h3>
@@ -200,6 +202,10 @@ import { Image } from "astro:assets";
             Please send image references. A full refsheet is best, a coloured
             sketch works too, but I'll be extrapolating for anything not shown.
         </p>
+        <p><b>
+            My usual art dimensions are approx. 2500 &times; 3500 px. Tell me if
+            you really need it larger beforehand.
+        </b></p>
         <hr />
         <ul>
             <li>Composition: I'll send one or a few rough sketches first.</li>

@@ -42,6 +42,12 @@ if (overlay && lbImg) {
         background: $color-surface;
         margin-top: $gap;
         margin-bottom: $gap;
+
+        @media screen and (max-width: 768px) {
+            width: calc(100% + $gap * 2);
+            margin-left: -$gap;
+            margin-right: -$gap;
+        }
     }
 
     .sliding-gallery {
