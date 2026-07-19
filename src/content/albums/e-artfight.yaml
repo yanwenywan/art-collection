@@ -1,0 +1,40 @@
+title: 鬭藝 Artfight
+description: Artfight Art
+cover: ./af/artfight-shadeii-shin-xuanhai.jpg
+images:
+  - file: af/revenge-emberxwolf-no-name.jpg
+    title: No Name
+    description: Revenge -> Ember_x_wolf
+  - file: af/revenge-dragonivanrussia-russian-ranger.jpg
+    title: Russian Ranger
+    description: Revenge -> DragonIvanRussia
+  - file: af/attack-peter.jpg
+    title: Smoke
+    description: Attack -> WarlordPete
+  - file: af/revenge-emerald-angry-old-man.jpg
+    title: Angry old man
+    description: Revenge -> 5_Emerald_9
+  - file: af/revenge-aralyx-evereal.jpg
+    title: Aralyx
+    description: Revenge -> Evereal
+  - file: af/attack-ryukiri.jpg
+    title: Sun lord from outer worlds
+    description: Attack -> Ryukiri
+  - file: af/attack-hourai-amelya-crashout.jpg
+    title: Crashout
+    description: Attack -> Hourai
+  - file: af/attack-hissy.jpg
+    title: Desert dragon
+    description: Attack -> HissyCrits
+  - file: af/artfight-kuro-synthier-revenge.jpg
+    title: Synthier
+    description: Revenge -> Kuro_Fei
+  - file: af/pattystuff-persona-artfight.jpg
+    title: On the clouds
+    description: Revenge -> PattyStuff
+  - file: af/artfight-shadeii-shin-xuanhai.jpg
+    title: So you want to spar...
+    description: Attack -> Shadeii
+  - file: etc/artfight-card.png
+    title: "2026 art fight card"
+    description: First artfight - Team Mystery

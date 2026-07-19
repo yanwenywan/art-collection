@@ -49,10 +49,17 @@ images:
   - file: chars/wen-qin.jpg
     title: 聞琴 Listening to Qin (redraw)
     description: Redraw for new style
+
+  - file: chars/dragon-nuzzle.jpg
+    title: Nuzzling
+    description: An Ye and Jiang Yi
+  - file: chars/an-ye-human-form.png
+    title: 安夜（人形） An Ye (human form)
+  - file: chars/jiang-yi.png
+    title: 姜藝 Jiang Yi
   - file: chars/zuojia.jpg
     title: 作家 The Writer
     description: An Ye and her Dao Companion 姜藝 Jiang Yi, the 梧桐真仙 Wutong Immortal. As the stars control fate, so can it write the future, this is the most sinister and powerful ability of that house.
-
   - file: chars/zhang-tai-array.png
     title: 張泰施陣法 Zhang Tai performing formation magic
     description: Zhang Tai the second prince of Zhang, founder of the 理術 Naturalist system
