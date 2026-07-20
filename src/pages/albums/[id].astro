@@ -3,6 +3,7 @@ import { getCollection, getEntry } from "astro:content";
 import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import InnerPage from "../../components/InnerPage.astro";
+import { Masonry } from "astro-masonry";
 
 export async function getStaticPaths() {
     const albums = await getCollection("albums");
@@ -29,25 +30,28 @@ const { title, description, images } = album.data;
 
         {
             images && images.length > 0 ? (
-                <div class="image-grid">
-                    {images.map((img) => (
-                        <figure>
-                            <Image
-                                src={img.file}
-                                alt={img.title ?? ""}
-                                width={img.file.width}
-                                height={img.file.height}
-                            />
-                            {img.title && (
-                                <figcaption>
-                                    <strong>{img.title}.</strong>
-                                    {img.description && (
-                                        <span>{img.description}</span>
-                                    )}
-                                </figcaption>
-                            )}
-                        </figure>
-                    ))}
+                <div class="image-grid-wrap">
+                    <Masonry breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                             sortByHeight={true}>
+                        {images.map((img) => (
+                            <figure>
+                                <Image
+                                    src={img.file}
+                                    alt={img.title ?? ""}
+                                    width={img.file.width}
+                                    height={img.file.height}
+                                />
+                                {img.title && (
+                                    <figcaption>
+                                        <strong>{img.title}.</strong>
+                                        {img.description && (
+                                            <span>{img.description}</span>
+                                        )}
+                                    </figcaption>
+                                )}
+                            </figure>
+                        ))}
+                    </Masonry>
                 </div>
             ) : (
                 <p class="empty">No images yet.</p>
@@ -65,7 +69,7 @@ const lbImg   = document.getElementById('lightbox-img') as HTMLImageElement | nu
 const lbCap   = document.getElementById('lightbox-caption') as HTMLElement | null;
 
 if (overlay && lbImg && lbCap) {
-  document.querySelectorAll<HTMLImageElement>('.image-grid figure img').forEach(img => {
+  document.querySelectorAll<HTMLImageElement>('.image-grid-wrap figure img').forEach(img => {
     img.style.cursor = 'zoom-in';
     img.addEventListener('click', () => {
       lbImg.src = img.src;
@@ -97,19 +101,24 @@ if (overlay && lbImg && lbCap) {
         /* margin: 0 auto; */
     }
 
-    .image-grid {
+    .image-grid-wrap {
         max-width: 1200px;
         margin: 0 auto;
-        columns: 3;
-        column-gap: $gap;
-
-        @media (max-width: 768px) {
-            columns: 2;
-        }
     }
+
+    :global(.astro-masonry-grid) {
+        display: flex;
+        width: auto;
+        margin-left: -$gap;
+    }
+
+    :global(.astro-masonry-grid_column) {
+        padding-left: $gap;
+        background-clip: padding-box;
+    }
+
     figure {
-        margin: 0 0 $gap 0;  // was margin: 0, need bottom gap now
-        break-inside: avoid;
+        margin: 0 0 $gap 0;  // vertical gap between stacked images
         img {
             width: 100%;
             height: auto;
