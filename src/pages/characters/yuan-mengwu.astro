@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentPage from "../../components/ContentPage.astro";
+import Feature from "../../components/Feature.astro";
+---
+
+<BaseLayout title="Yuan Mengwu">
+    <ContentPage
+        title="元夢吾 Yuan Mengwu"
+        description="The Taoist Mengyun, nascent soul heart cultivator, elder of the House of Stars"
+        backHref="/"
+    >
+        <h2>Yuan Mengwu</h2>
+        
+        <p>
+            Trying out these pages for some worldbuilding. Everything's quite under construction.
+        </p>
+
+        <Feature
+            image={import("../../content/albums/chars/yuan-mengwu-ref.jpg")}
+            alt="yuan mengwu reference sheet"
+            title="Reference sheet"
+        />
+
+
+    </ContentPage>
+</BaseLayout>

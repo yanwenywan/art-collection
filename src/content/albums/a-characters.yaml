@@ -2,6 +2,26 @@ title: "神海人設 Caeleste Mare: Characters"
 description: Sketches and full drawings of original characters from CM
 cover: ./chars/moon-god-temple.jpg
 images:
+
+  - file: chars/dragon-nuzzle.jpg
+    title: Nuzzling
+    description: An Ye and Jiang Yi
+  - file: chars/an-ye-human-form.png
+    title: 安夜（人形） An Ye (human form)
+  - file: chars/jiang-yi.png
+    title: 姜藝 Jiang Yi
+  - file: ./chars/yan-wen.jpg
+    title: 悟玄真仙燕文 The Wuxuan Immortal, Yan Wen
+    description: Yan Wen, second prince of Yan, son of Yan Xin. Retreated into seclusion and became a disciple of the moon venerable.
+  - file: chars/xuanyang.jpg
+    title: 玄陽 Xuanyang
+    description: King of the eastern sea in the elven plane, tyrant above all dragonkind
+  - file: chars/moon-god-temple.jpg
+    title: 月尊雨神 Moon Venerable; Rain God
+    description: given name 玄海 Xuanhai, lesser deity of the moon, also controls the rains, harvest, and dispels evil.
+  - file: chars/xingzun-temple.jpg
+    title: 無上星尊 The Supreme Venerable of the Stars
+    description: surname 安 An, given name 夜 Ye, lesser deity of the stars, second in the throne. She was born a mortal and ascended during the time of the human dynasty of Liao, and is the weakest of the lesser gods. The stars ordain fate, omens, and seasons, and is decidedly sinister in nature, despite An Ye herself being very kind in nature.
   - file: chars/yuan-mengwu-ref.jpg
     title: 夢雲道人 元夢吾 Mengyun Taoist Yuan Mengwu (Reference)
     description: Reference showcase for Yuan Mengwu, elder of the House of Stars, heart cultivator, widely regarded as the most enchanting person in the entire sect.
@@ -14,60 +34,20 @@ images:
   - file: chars/dongfang-tianjie-ref.jpg
     title: 東方天界 参考图 Dongfang Tianjie (Reference)
     description: Second son of the late Marquis of Jiangxia, a carefree young soul (gay in all the definitions), and an avid martial artist. He likes to show off and be the centre of attention, and is sometimes affectionally known as the "Flower of Tianjing".
-
-  - file: ./chars/yan-wen.jpg
-    title: 悟玄真仙燕文 The Wuxuan Immortal, Yan Wen
-    description: Yan Wen, second prince of Yan, son of Yan Xin. Retreated into seclusion and became a disciple of the moon venerable.
-  - file: chars/xuanyang.jpg
-    title: 玄陽 Xuanyang
-    description: King of the eastern sea in the elven plane, tyrant above all dragonkind
-  - file: chars/qin-of-yan.jpg
-    title: 燕欽王 King Qin of Yan
-    description: given name 燕昕 Yan Xin, first emperor of the Yan dragon dynasty, which began 16,000 years of draconic rule.
-  - file: chars/moon-god-temple.jpg
-    title: 月尊雨神 Moon Venerable; Rain God
-    description: given name 玄海 Xuanhai, lesser deity of the moon, also controls the rains, harvest, and dispels evil.
-  - file: chars/xingzun-temple.jpg
-    title: 無上星尊 The Supreme Venerable of the Stars
-    description: surname 安 An, given name 夜 Ye, lesser deity of the stars, second in the throne. She was born a mortal and ascended during the time of the human dynasty of Liao, and is the weakest of the lesser gods. The stars ordain fate, omens, and seasons, and is decidedly sinister in nature, despite An Ye herself being very kind in nature.
-  - file: chars/yuan-mengwu.jpg
-    title: 夢雲道人元夢吾 Mengyun Daoist Yuan Mengwu
-    description: (Torrential Rains timeline) Yuan Mengwu, nascent soul elder of the 星府龍宮 House of Stars Dragon Palace, heart cultivator.
-  - file: chars/golmak.png
-    title: 死神 Golmak, former God of Death
-    description: "he tried to usurp a god and was struck down, now a shadow lurking in the dark, his power locked away. (Artist commentary: wasnt actually too happy with this piece, but it's growing on me somehow)"
-  - file: chars/ouyang-zhan.png
-    title: 歐陽湛 Ouyang Zhan
-    description: Qin master and leader of the Ouyang Sect, one of the strongest mages in the world. Eventually became a disciple of the Rain God, and ascended to immortality. Same generation as Star Venerable An Ye.
-
-  - file: chars/yan-xin-1h-lineless.png
-    title: King Qin of Yan
-    description: One hour lineless practice
-  - file: chars/yuan-mengwu-fan.png
-    title: 元夢吾 Yuan Mengwu
-    description: Alternate drawing of Yuan Mengwu
-  - file: chars/wen-qin.jpg
-    title: 聞琴 Listening to Qin (redraw)
-    description: Redraw for new style
-
-  - file: chars/dragon-nuzzle.jpg
-    title: Nuzzling
-    description: An Ye and Jiang Yi
-  - file: chars/an-ye-human-form.png
-    title: 安夜（人形） An Ye (human form)
-  - file: chars/jiang-yi.png
-    title: 姜藝 Jiang Yi
-  - file: chars/zuojia.jpg
-    title: 作家 The Writer
-    description: An Ye and her Dao Companion 姜藝 Jiang Yi, the 梧桐真仙 Wutong Immortal. As the stars control fate, so can it write the future, this is the most sinister and powerful ability of that house.
   - file: chars/zhang-tai-array.png
     title: 張泰施陣法 Zhang Tai performing formation magic
     description: Zhang Tai the second prince of Zhang, founder of the 理術 Naturalist system
   - file: chars/an-ye-hug.png
     title: An Ye hugging Jiang Yi
+  - file: chars/yan-xin-1h-lineless.png
+    title: King Qin of Yan
+    description: One hour lineless practice
   - file: chars/mengwu-tail-spear-xuankongfang-sketch.png
     title: 夢吾進攻懸空坊 Mengwu Attacks Xuankongfang
     description: Yuan Mengwu leading an attack against the demonic sect at Xuankongfang (the "floating market"). Torrential Rains timeline.
+  - file: chars/wen-qin.jpg
+    title: 聞琴 Listening to Qin (redraw)
+    description: Redraw for new style
   - file: chars/xuanhai-exhale.png
     title: 吐仙雲 Breathing clouds
   - file: chars/star-venerable-dress-3rd.png
@@ -85,6 +65,9 @@ images:
     title: 月尊幼弟 given name 滄海, the younger of two brothers, who was banished to Qara Qai. Also known as the feathered god.
   - file: chars/an-ye-jiang-yi.png
     title: An Ye and Jiang Yi
+  - file: chars/yuan-mengwu-fan.png
+    title: 元夢吾 Yuan Mengwu
+    description: Alternate drawing of Yuan Mengwu
   - file: chars/an-ye-chi-dao.png
     title: 安夜持刀 An Ye with Guandao
   - file: chars/guandao-po-tianjie.png
@@ -102,6 +85,9 @@ images:
   - file: chars/four-houses.png
     title: Four dragon houses of the stars
     description: The four dragon clans of the Ancient Star Venerable. An Ye belongs to the northern branch (虛 Xu)
+  - file: chars/zuojia.jpg
+    title: 作家 The Writer
+    description: An Ye and her Dao Companion 姜藝 Jiang Yi, the 梧桐真仙 Wutong Immortal. As the stars control fate, so can it write the future, this is the most sinister and powerful ability of that house.
   - file: chars/jiang-yi.jpg
     title: 姜藝 Jiang Yi (comic)
     description: Comic introducing the Wutong Daoist Jiang Yi.
@@ -110,6 +96,9 @@ images:
     description: An Ye, Jiang Yi, and Jiang Yi's crane-demon disciple 仙靈 Xianling.
   - file: chars/wenqin.png
     title: 聞琴 Listening to Qin
+  - file: chars/qin-of-yan.jpg
+    title: 燕欽王 King Qin of Yan
+    description: given name 燕昕 Yan Xin, first emperor of the Yan dragon dynasty, which began 16,000 years of draconic rule.
   - file: chars/zhenxiang.jpg
     title: 真相 True Form
     description: As a grown dragon and lesser deity, An Ye is actually quite large. Usually though, she shrinks her form to more conveniently move around in normal life.
@@ -125,6 +114,15 @@ images:
   - file: chars/identity-2-cn.png
     title: Identity
     description: Introduces 姜林 Jiang Lin, Jiang Yi's son, and 蘭之禮 Lan Zhili, from the Lan clan of Jingwu.
+  - file: chars/yuan-mengwu.jpg
+    title: 夢雲道人元夢吾 Mengyun Daoist Yuan Mengwu
+    description: (Torrential Rains timeline) Yuan Mengwu, nascent soul elder of the 星府龍宮 House of Stars Dragon Palace, heart cultivator.
   - file: chars/dftj.png
     title: 少主東方 Young Lord Dongfang
     description: Dongfang Tianjie.
+  - file: chars/golmak.png
+    title: 死神 Golmak, former God of Death
+    description: "he tried to usurp a god and was struck down, now a shadow lurking in the dark, his power locked away. (Artist commentary: wasnt actually too happy with this piece, but it's growing on me somehow)"
+  - file: chars/ouyang-zhan.png
+    title: 歐陽湛 Ouyang Zhan
+    description: Qin master and leader of the Ouyang Sect, one of the strongest mages in the world. Eventually became a disciple of the Rain God, and ascended to immortality. Same generation as Star Venerable An Ye.

@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentPage from "../../components/ContentPage.astro";
+import Feature from "../../components/Feature.astro";
+---
+
+<BaseLayout title="Xuanhai">
+    <ContentPage
+        title="玄海 Xuanhai"
+        description="Venerable of the moon, god of rain, venerated across the continent"
+        backHref="/"
+    >
+        <h2>Xuanhai</h2>
+        
+        <p>
+            Trying out these pages for some worldbuilding. Everything's quite under construction.
+        </p>
+
+        <Feature
+            image={import("../../content/albums/chars/yushen-ref.jpg")}
+            alt="Xuanhai reference sheet"
+            title="Reference sheet"
+        />
+
+
+    </ContentPage>
+</BaseLayout>

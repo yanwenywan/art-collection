@@ -13,11 +13,55 @@ import CharacterButton from "../components/CharacterButton.astro";
         <section id="portfolio">
             <CharacterGrid>
                 <CharacterButton
+                    href="/characters/xuanhai/"
+                    image={import("../content/profiles/xuanhai.jpg")}
+                    title="月尊玄海 The Moon Venerable Xuanhai"
+                    subtitle="雨神 Rain God"
+                />
+                <CharacterButton
                     href="/characters/an-ye/"
                     image={import("../content/profiles/an-ye.jpg")}
                     title="星尊安夜 The Star Venerable An Ye"
                 />
-                <!-- add more buttons here -->
+                <CharacterButton
+                    href="/characters/dongfang-tianjie/"
+                    image={import("../content/profiles/dftj.jpg")}
+                    title="東方天界 Dongfang Tianjie"
+                />
+                <CharacterButton
+                    href="/characters/yuan-mengwu/"
+                    image={import("../content/profiles/ymw.jpg")}
+                    title="元夢吾 Yuan Mengwu"
+                    subtitle="夢雲道人 Mengyun 'dream cloud' Taoist"
+                />
+                <CharacterButton
+                    href="/characters/xuanyang/"
+                    image={import("../content/profiles/xuanyang.jpg")}
+                    title="玄陽 Xuanyang"
+                />
+                <CharacterButton
+                    href="/characters/yan-wen/"
+                    image={import("../content/profiles/yan-wen.jpg")}
+                    title="燕文 Yan Wen"
+                    subtitle="悟玄大師 Master Wuxuan"
+                />
+                <CharacterButton
+                    href="/characters/yan-xin/"
+                    image={import("../content/profiles/yan-xin.png")}
+                    title="燕昕 Yan Xin"
+                    subtitle="燕欽王·燕始帝 King Qin of Yan; first Emperor of Yan"
+                />
+                <CharacterButton
+                    href="/characters/ouyang-zhan/"
+                    image={import("../content/profiles/oyz.png")}
+                    title="歐陽湛 Ouyang Zhan"
+                    subtitle="金華真仙 Jinhua Immortal"
+                />
+                <CharacterButton
+                    href="/characters/golmak/"
+                    image={import("../content/profiles/golmak.png")}
+                    title="Golmak"
+                />
             </CharacterGrid>
             <GalleryGrid />
         </section>

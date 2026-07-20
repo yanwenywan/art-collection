@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentPage from "../../components/ContentPage.astro";
+import Feature from "../../components/Feature.astro";
+---
+
+<BaseLayout title="Yan Wen">
+    <ContentPage
+        title="燕文 Yan Wen"
+        description="Second son of the founding emperor of Yan, who retreated into the mountains and became a monk, and immortal under the moon venerable"
+        backHref="/"
+    >
+        <h2>Yan Wen</h2>
+        
+        <p>
+            Trying out these pages for some worldbuilding. Everything's quite under construction.
+        </p>
+
+        <Feature
+            image={import("../../content/albums/chars/yan-wen.jpg")}
+            alt="yan wen portrait"
+            title="Yan Wen portrait"
+            maxHeight="480px"
+        />
+
+
+    </ContentPage>
+</BaseLayout>

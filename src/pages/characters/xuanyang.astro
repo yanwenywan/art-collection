@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentPage from "../../components/ContentPage.astro";
+import Feature from "../../components/Feature.astro";
+---
+
+<BaseLayout title="Xuanyang">
+    <ContentPage
+        title="玄陽 Xuanyang"
+        description="A Heaven-dragon, beast of heavenly tribulation, tyrant of the east sea and lord of all winged dragons in the twilight realm."
+        backHref="/"
+    >
+        <h2>Xuanyang</h2>
+        
+        <p>
+            Trying out these pages for some worldbuilding. Everything's quite under construction.
+        </p>
+
+        <Feature
+            image={import("../../content/albums/chars/xuanyang.jpg")}
+            alt="xuanyang portrait"
+            title="Xuanyang portrait"
+            maxHeight="480px"
+        />
+
+
+    </ContentPage>
+</BaseLayout>

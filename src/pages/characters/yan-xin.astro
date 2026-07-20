@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentPage from "../../components/ContentPage.astro";
+import Feature from "../../components/Feature.astro";
+---
+
+<BaseLayout title="Yan Xin">
+    <ContentPage
+        title="燕昕 Yan Xin"
+        description="King Qin of Yan, who founded the Yan dynasty and started dragonkind's dynastic rule over the central plains."
+        backHref="/"
+    >
+        <h2>Yan Xin</h2>
+        
+        <p>
+            Trying out these pages for some worldbuilding. Everything's quite under construction.
+        </p>
+
+        <Feature
+            image={import("../../content/albums/chars/qin-of-yan.jpg")}
+            alt="king qin of yan"
+            title="Yan Xin, King Qin of Yan"
+        />
+
+
+    </ContentPage>
+</BaseLayout>
