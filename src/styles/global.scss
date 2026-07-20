@@ -77,3 +77,44 @@ hr {
   // gallery rows shrink to single-column layout
   // handled in component-level styles
 }
+
+// Shared lightbox — overlay injected by src/scripts/lightbox.ts
+.sliding-gallery img,
+.image-grid-wrap figure img,
+.feature img {
+  cursor: zoom-in;
+}
+
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  cursor: zoom-out;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; // stack image + caption vertically
+  gap: 1rem;
+  padding: 2rem;
+
+  &.active {
+    display: flex;
+  }
+
+  img {
+    max-width: 90vw;
+    max-height: 80vh; // leave room for caption
+    object-fit: contain;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
+    cursor: default;
+  }
+
+  figcaption {
+    text-align: center;
+    font-family: $font-body;
+    font-size: 0.9rem;
+    color: $color-muted;
+    strong { color: $color-text; }
+  }
+}

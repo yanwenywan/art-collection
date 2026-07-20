@@ -10,6 +10,11 @@ interface Props {
     maxHeight?: string;
 }
 const { image, alt, title, subtitle, maxHeight } = Astro.props;
+
+const caption =
+    title || subtitle
+        ? `${title ? `<strong>${title}.</strong> ` : ""}${subtitle ? `<span>${subtitle}</span>` : ""}`
+        : undefined;
 ---
 
 <div class="feature-bleed">
@@ -19,11 +24,14 @@ const { image, alt, title, subtitle, maxHeight } = Astro.props;
             alt={alt ?? title ?? ""}
             class:list={["feature-img", { "feature-img--capped": maxHeight }]}
             style={maxHeight ? `--feat-max:${maxHeight}` : undefined}
+            data-caption={caption}
         />
         {title && <p class="feature-title">{title}</p>}
         {subtitle && <p class="feature-sub">{subtitle}</p>}
     </div>
 </div>
+
+<script>import "../scripts/lightbox.ts";</script>
 
 <style lang="scss">
     @use "../styles/tokens" as *;
