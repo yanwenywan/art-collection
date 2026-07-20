@@ -3,12 +3,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageShell from "../components/PageShell.astro";
 import Sidebar from "../components/Sidebar.astro";
 import GalleryGrid from "../components/GalleryGrid.astro";
+import CharacterGrid from "../components/CharacterGrid.astro";
+import CharacterButton from "../components/CharacterButton.astro";
 ---
 
 <BaseLayout title="Yan's Gallery">
     <PageShell>
         <Sidebar slot="sidebar" />
         <section id="portfolio">
+            <CharacterGrid>
+                <CharacterButton
+                    href="/characters/an-ye/"
+                    image={import("../content/profiles/an-ye.jpg")}
+                    title="星尊安夜 The Star Venerable An Ye"
+                />
+                <!-- add more buttons here -->
+            </CharacterGrid>
             <GalleryGrid />
         </section>
     </PageShell>

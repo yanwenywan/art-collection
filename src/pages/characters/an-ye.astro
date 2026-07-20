@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentPage from "../../components/ContentPage.astro";
+import Feature from "../../components/Feature.astro";
+---
+
+<BaseLayout title="An Ye">
+    <ContentPage
+        title="安夜 An Ye"
+        description="Venerable of the Stars, matriarch of the House of Jiang in the East Sea"
+        backHref="/"
+    >
+        <h2>An Ye</h2>
+        
+        <p>
+            Trying out these pages for some worldbuilding. Everything's quite under construction.
+        </p>
+
+        <Feature
+            image={import("../../content/albums/chars/an-ye-ref.jpg")}
+            alt="An Ye reference sheet"
+            title="Reference sheet"
+        />
+
+
+    </ContentPage>
+</BaseLayout>

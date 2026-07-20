@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+    image: ImageMetadata | Promise<{ default: ImageMetadata }>;
+    alt?: string;
+    title?: string;
+    subtitle?: string;
+    maxHeight?: string;
+}
+const { image, alt, title, subtitle, maxHeight } = Astro.props;
+---
+
+<div class="feature-bleed">
+    <div class="feature">
+        <Image
+            src={image}
+            alt={alt ?? title ?? ""}
+            class:list={["feature-img", { "feature-img--capped": maxHeight }]}
+            style={maxHeight ? `--feat-max:${maxHeight}` : undefined}
+        />
+        {title && <p class="feature-title">{title}</p>}
+        {subtitle && <p class="feature-sub">{subtitle}</p>}
+    </div>
+</div>
+
+<style lang="scss">
+    @use "../styles/tokens" as *;
+
+    .feature-bleed {
+        width: calc(100% + $gap * 5);
+        margin-left: calc($gap * -2.5);
+        margin-right: calc($gap * -2.5);
+        margin-top: $gap;
+        margin-bottom: $gap;
+        background: $color-surface;
+
+        @media screen and (max-width: 768px) {
+            width: calc(100% + $gap * 2);
+            margin-left: -$gap;
+            margin-right: -$gap;
+        }
+    }
+
+    .feature {
+        padding: $gap;
+        text-align: center;
+    }
+
+    .feature-title {
+        font-family: $font-body;
+        font-weight: 700;
+        color: $color-text;
+        margin: 0;
+    }
+
+    .feature-sub {
+        font-family: $font-body;
+        font-size: 0.85rem;
+        color: $color-muted;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .feature-img {
+        display: block;
+        margin: 0 auto $gap;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .feature-img--capped {
+        max-height: var(--feat-max);
+        width: auto;
+    }
+</style>

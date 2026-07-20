@@ -15,3 +15,17 @@ $sidebar-width: 280px;
 $nav-height: 56px;
 $gallery-row-height: 480px;
 $gap: 1.5rem;
+
+// Shared 3→2→1 responsive grid
+@mixin responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap;
+    padding: $gap;
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
+}
