@@ -2,7 +2,13 @@ title: "神海人設 Caeleste Mare: Characters"
 description: Sketches and full drawings of original characters from CM
 cover: ./chars/moon-god-temple.jpg
 images:
-
+  - file: chars/yushen-oils-headshot.jpg
+    title: Rain God Xuanhai Oil Portrait
+  - file: chars/an-ye-oil-portrait.jpg
+    title: An Ye Oil Portrait
+    description: Test painting of An Ye using some new impasto brushes I added to my oils set
+  - file: chars/mle.jpg
+    title: Mlem
   - file: chars/dragon-nuzzle.jpg
     title: Nuzzling
     description: An Ye and Jiang Yi

@@ -2,6 +2,12 @@ title: 鬭藝 Artfight
 description: Artfight Art
 cover: ./af/artfight-shadeii-shin-xuanhai.jpg
 images:
+  - file: af/attack-poem.jpg
+    title: Poem
+    description: Attack -> Poem (more oil painting brush set)
+  - file: af/dauzito.jpg
+    title: Owl owl owl owl owl
+    description: Attack -> Dauzito (oil painting set)
   - file: af/revenge-emberxwolf-no-name.jpg
     title: No Name
     description: Revenge -> Ember_x_wolf
