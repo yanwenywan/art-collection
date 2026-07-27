@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContentPage from "../../components/ContentPage.astro";
 import Feature from "../../components/Feature.astro";
+import Sc from "../../components/Sc.astro";
+import SideImage from "../../components/SideImage.astro";
 ---
 
 <BaseLayout title="An Ye">
@@ -13,7 +15,7 @@ import Feature from "../../components/Feature.astro";
         <h2>An Ye</h2>
         
         <p>
-            Trying out these pages for some worldbuilding. Everything's quite under construction.
+            <i>Hallowed be the Myriad Stars, abounding be Her Heaven! Her light blankets the iron waters, Emperor of light and dark.</i>
         </p>
 
         <Feature
@@ -22,6 +24,41 @@ import Feature from "../../components/Feature.astro";
             title="Reference sheet"
         />
 
+        <p>
+            It is said that the Sun is proud, standing alone with all beneath. The Moon is kind, taking all beneath heaven as his children. The Stars are mysterious, an imperial throne with offspring as numerous as the stars themselves.
+        </p>
+
+        <SideImage
+            image={import("../../content/albums/chars/xingzun-temple.jpg")}
+            caption="The Star Venerable's temple portrait"
+            maxWidth="400px"
+        />
+
+        <p>
+            When the first Star Venerable was crowned in the east by <Sc>Asyr</Sc>, he created thirty-five families in total: the three royal lineages of the three enclosures, the four noble dukes of the four directions, and the twenty-eight lords of the twenty-eight mansions, seven to a duke. When the first Star Venerable fell, his children scattered, and over the millennia became extinct or fell into obscurity.
+        </p>
+
+        <p>
+            An Ye is a "Night River" dragon, a far descendant of the dragon lineage of Xu, in the northern quarter of the sky. Due to this lineage, she looks different from the eight major dragon races, and she and her family were hunted down for it, as many of the Stars' descendants were.
+        </p>
+
+        <p>
+            By the time the Yin dynasty fell, and dragonkind's dynastic rule over the central plains ended, all that remained of the Xu lineage was a father and daughter pair, An Zichen and An Ye, living half-wild in the arid northwest. 
+        </p>
+
+        <p>
+            Due to their bloodline, they were hunted down by both demonic sects, and the maniacal dragon general "Divine Lightning", the latter of whom An Zichen sacrificed himself to mortally wound, letting his daughter escape. She was nonetheless pursued by the demonic sects, nearly dying in the process, before being saved by chance by a human wandering Taoist called Jiang Yi. The two of them successfully escaped to the eastern sea, establishing the House of Jiang.
+        </p>
+
+        <p>
+            The two of them discovered her lineage, slowly explored the remnants of the first Star Venerable's ancient kingdom, and eventually with his help she ascended to the throne of Stars, and Jiang Yi became her first immortal.
+        </p>
+
+        <p>
+            The Star Venerable is worshipped to some extent by the people of the sea, but her cult is not as extensive as that of the Moon, and something she does not have much interest in growing.
+        </p>
+
+        <hr></hr>
 
     </ContentPage>
 </BaseLayout>
