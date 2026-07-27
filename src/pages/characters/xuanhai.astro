@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContentPage from "../../components/ContentPage.astro";
 import Feature from "../../components/Feature.astro";
+import SideImage from "../../components/SideImage.astro";
+import Sc from "../../components/Sc.astro";
 ---
 
 <BaseLayout title="Xuanhai">
@@ -10,10 +12,12 @@ import Feature from "../../components/Feature.astro";
         description="Venerable of the moon, god of rain, venerated across the continent"
         backHref="/"
     >
-        <h2>Xuanhai</h2>
+        <h2>The Rain God, Xuanhai</h2>
         
         <p>
-            Trying out these pages for some worldbuilding. Everything's quite under construction.
+            <i>Fortune born the brothers of the moon, gods of the rain. He who controls
+                the water, brings bounty and harvest, and takes all under heaven as his
+                children.</i>
         </p>
 
         <Feature
@@ -22,6 +26,56 @@ import Feature from "../../components/Feature.astro";
             title="Reference sheet"
         />
 
+        <p>
+            The rain god "Xuanhai" is the elder of two brothers, born from one egg in ancient
+            times atop the divine mountain of Damak Dai. He is half divine, his father the Dragon
+            creator god Xiron.
+        </p>
+        <SideImage
+            image={import("../../content/albums/chars/moon-god-temple.jpg")}
+            caption="The Rain God's temple portrait"
+            right
+            maxWidth="400px"
+        />
+        <p>
+            In that ancient era, the skies were chaotic and ever-changing, just as the rivers
+            and mountains were orderly. That was as <Sc>Asyr</Sc>, who created the heavens, was
+            the embodiment of chaos and disorder, and <Sc>Xiron</Sc>, who created the earth,
+            was the embodiment of order and harmony.
+        </p>
+        <p>
+            Xuanhai and his brother Canghai, seeing the suffering of the
+            common people, and the wild and unenlightened nature of their own kind, wished to
+            use their power to help all under heaven. Defying heaven, they commanded the
+            primordial sky to calm, creating peace and prosperity. In the night they became twin
+            moons that shone calming light, suppressing the ghosts and terrors that lurk in the 
+            darkness.
+        </p>
+        <p>
+            Hence the heavens were calmed, and people rejoiced, giving the brothers incense and prayer; 
+            however this act that defied heaven, defied the creator <Sc>Asyr</Sc>, brought her ire
+            down upon them. As they were of divine blood, "family" even in a sense, she could not
+            just kill them, hence she exiled the younger brother far overseas, and imprisoned the elder
+            brother atop Damak Dai, decreeing that neither would see each other again. From that point on,
+            the weather became a compromise of primordial chaos and controlled order; the younger brother
+            was slowly forgotten save for in legends, and only one moon shone in the night.
+        </p>
+
+        <p>
+            "Xuanhai" and "Canghai" were style names picked by the brothers themselves. Their draconic
+            names were long lost to time. Even the name "Xuanhai" today is uknown, as the tradition of 
+            name taboo has lead to it being avoided to such an extent that he is only known by the title
+            "Rain God" or "Moon Venerable".
+        </p>
+
+        <h3>漢文注釋</h3>
+
+        <p>
+            二神漢文本字曰：玄海、滄海。玄海長兄，滄海幼弟。今茲字大失。凡人避諱，不敢直呼。久而久之，但言
+            尊號，或曰雨神或曰月尊。
+        </p>
+
+        <hr></hr>
 
     </ContentPage>
 </BaseLayout>

@@ -1,5 +1,5 @@
 const SELECTOR =
-    ".sliding-gallery img, .image-grid-wrap figure img, .feature img";
+    ".sliding-gallery img, .image-grid-wrap figure img, .feature img, .side-image img";
 
 let overlay: HTMLDivElement;
 let lbImg: HTMLImageElement;

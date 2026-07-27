@@ -39,6 +39,7 @@ ul, ol {
 
 h2 {
   margin-top: $gap;
+  clear: both;
 }
 
 h3 {
@@ -50,6 +51,7 @@ hr {
     margin: 1em 0;
     border: 0;
     border-top: 1px solid $color-accent;
+    clear: both;
 }
 
 // Fixed blurred background — sits behind all content
@@ -81,7 +83,8 @@ hr {
 // Shared lightbox — overlay injected by src/scripts/lightbox.ts
 .sliding-gallery img,
 .image-grid-wrap figure img,
-.feature img {
+.feature img,
+.side-image img {
   cursor: zoom-in;
 }
 
