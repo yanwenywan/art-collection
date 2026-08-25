@@ -22,6 +22,9 @@ import { Image } from "astro:assets";
             I don't flat-colour so everything includes some level of shading.
         </p>
         <p>
+            I have a few art styles floating around, you can request which one you prefer (no-lineart is not an option and at-whim)
+        </p>
+        <p>
             Contact me on discord to talk more and get quotes (if we're not
             already friends, please state in your message (a) where you came
             from, and (b) that you'd like a commission)
@@ -51,7 +54,7 @@ import { Image } from "astro:assets";
         </SlidingGallery>
         <p>Complex Backgrounds examples:</p>
         <SlidingGallery>
-
+            <Image src={import("../content/albums/requests/grey-mountains.jpg")} alt="Grey - complex scene"></Image>
             <Image src={import("../content/albums/requests/gwydien.jpg")} alt="Gwydien - complex scene"></Image>
             <Image src={import("../content/albums/requests/mekanip-rock.png")}  alt="Mekanip on a rock - complex scene"></Image>
             <Image src={import("../content/albums/requests/topaz-an.jpg")} alt="Topaz and An"></Image>
@@ -59,21 +62,22 @@ import { Image } from "astro:assets";
 
         <h3>Headshots and Portraits</h3>
 
-        <p><b>£25.</b> Headshot with no background (i.e. solid colour, or transparent)</p>
+        <p><b>£25.</b> Headshot with no or simple background (i.e. solid colour, transparent, or gradients)</p>
 
         <p>
-            Surcharges guideline: +£5 for simple background (e.g. clouds, patterns, etc); +£10 for more of a bust, including shoulders etc; +£a lot if you want me to make it look <i>really</i> fancy (last image).
+            Surcharges guideline: +£5 for more background, complex characters; +£10 for more of a bust, including shoulders etc; +£idk-but-a-fair-bit if you want me to make it look <i>really</i> fancy (last image).
         </p>
         <p>
             Discounts guideline: Possible discount for very simple character designs.
         </p>
+        <p>Look through my gallery as there's a couple art styles there.</p>
         <p>
             Examples:
         </p>
 
         <SlidingGallery>
+            <Image src={import("../content/albums/requests/lack-floof.jpg")} alt="Lack"></Image>
             <Image src={import("../content/albums/requests/poem-portrait.png")} alt="Poem"></Image>
-            <Image src={import("../content/albums/requests/nyth.png")} alt="Nyth"></Image>
             <Image src={import("../content/albums/requests/vividg.png")} alt="vivi"></Image>
             <Image src={import("../content/albums/requests/szen-headshot.png")} alt="szen"></Image>
             <Image src={import("../content/albums/requests/vioportrait.png")} alt="vio"></Image>
