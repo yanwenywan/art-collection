@@ -2,6 +2,14 @@ title: "神海人設 Caeleste Mare: Characters"
 description: Sketches and full drawings of original characters from CM
 cover: ./chars/moon-god-temple.jpg
 images:
+  - file: chars/mengsip.png
+    title: Mengwu tea emote
+  - file: chars/nanjin-ji.jpg
+    title: 南金霽 Nanjin Ji
+    description: "Wind-piercing claw"
+  - file: chars/yushen-on-damak.jpg
+    title: Rain God atop Damak
+    description: Sketch of the Rain God in full divine form atop the holy mountain Damak Dai
   - file: chars/yushen-at-changhai.jpg
     title: Rain God at Changhai
     description: Painting over a real image - Changhai (lake) in Jiuzhaigou National Park, Sichuan
