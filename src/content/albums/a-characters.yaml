@@ -2,6 +2,15 @@ title: "神海人設 Caeleste Mare: Characters"
 description: Sketches and full drawings of original characters from CM
 cover: ./chars/moon-god-temple.jpg
 images:
+  - file: chars/ref-ouyang-zhan.jpg
+    title: 金華真仙歐陽湛 Ouyang Zhan, leader of the Ouyang Sect and Jinhua Immortal
+    description: Simple reference style
+  - file: chars/ref-yan-wen.jpg
+    title: 悟玄真仙燕文 Yan Wen, former second prince of Yan, and Wuxuan Immortal 
+    description: Simple reference style
+  - file: chars/ref-yan-xin.jpg
+    title: 燕欽王昕 Yan Xin, King Qin of Yan
+    description: Simple reference style
   - file: chars/mengsip.png
     title: Mengwu tea emote
   - file: chars/nanjin-ji.jpg

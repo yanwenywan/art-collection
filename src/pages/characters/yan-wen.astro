@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContentPage from "../../components/ContentPage.astro";
 import Feature from "../../components/Feature.astro";
+import SideImage from "../../components/SideImage.astro";
 ---
 
 <BaseLayout title="Yan Wen">
@@ -13,19 +14,27 @@ import Feature from "../../components/Feature.astro";
         <h2>Yan Wen</h2>
         
         <Feature
-            image={import("../../content/albums/chars/yan-wen.jpg")}
-            alt="yan wen portrait"
-            title="Yan Wen portrait"
+            image={import("../../content/albums/chars/ref-yan-wen.jpg")}
+            alt="yan wen simple reference"
+            title="Yan Wen simple reference"
             maxHeight="480px"
         />
 
+        
         <p>
             Second son of the first emperor Yan Xin, a recluse scholar, unlike his elder brother the 
             crown prince. When the Yan dynasty fell he retreated into hiding in the mountains, thus 
             preserving his life, and was eventually forgotten by the world. He studied under and
             became an immortal disciple of the Moon Venerable, becoming a monk and taking on the monk
-            name "Wuxuan"
+            name "Wuxuan", "Comprehending the Abtruse".
         </p>
+
+        <!-- <Feature
+            image={import("../../content/albums/chars/yan-wen.jpg")}
+            alt="yan wen portrait"
+            title="Yan Wen portrait"
+            maxHeight="400px"
+        /> -->
 
     </ContentPage>
 </BaseLayout>
