@@ -1,6 +1,18 @@
 ---
+interface Props {
+    background?: string;
+    hoverBackground?: string;
+    textColor?: string;
+    textHoverColour?: string;
+}
+const { background, hoverBackground, textColor, textHoverColour } = Astro.props;
+
+const realTextHoverColour = textHoverColour ?? textColor;
 ---
-<span class="pill"><slot /></span>
+<span
+    class="pill"
+    style={{ "--pill-bg": background, "--pill-bg-hover": hoverBackground, "--pill-text": textColor, "--pill-text-hover": realTextHoverColour }}
+><slot /></span>
 
 <style lang="scss">
     @use "../styles/tokens" as *;
@@ -15,13 +27,13 @@
         text-transform: uppercase;
         padding: 0.25rem 0.75rem;
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.07);
-        color: $color-muted;
+        background: var(--pill-bg, rgba(255, 255, 255, 0.07));
+        color: var(--pill-text, $color-muted);
         transition: background 0.15s, color 0.15s;
 
         :global(.pill-link):hover & {
-            background: rgba(255, 255, 255, 0.12);
-            color: $color-text;
+            background: var(--pill-bg-hover, rgba(255, 255, 255, 0.12));
+            color: var(--pill-text-hover, $color-text);
         }
     }
 </style>

@@ -4,45 +4,98 @@ import ContentPage from "../components/ContentPage.astro";
 import Pill from "../components/Pill.astro";
 import SlidingGallery from "../components/SlidingGallery.astro";
 import { Image } from "astro:assets";
+
+const open = false;
 ---
 
 <BaseLayout title="Commissions Information">
     <ContentPage title="Commissions"
                  description="Information on commissions and guideline prices. Always read the ToS.">
-        <Pill>Commissions: Closed</Pill>
-
-        <h2>Prices</h2>
-
-        <p>
-            All prices are <i>guidelines</i>, they can be more or less depending
-            on complexity of scene, complexity of characters, number of
-            characters, &c. Prices in GBP.
-        </p>
-        <p>
-            I don't flat-colour so everything includes some level of shading.
-        </p>
-        <p>
-            I have a few art styles floating around, you can request which one you prefer (no-lineart is not an option and at-whim)
-        </p>
-        <p>
-            Contact me on discord to talk more and get quotes (if we're not
-            already friends, please state in your message (a) where you came
-            from, and (b) that you'd like a commission)
-        </p>
-
-
-
-        <h3>Fullbody with Scene</h3>
+        {
+        open 
+          ? <Pill textColor="rgb(235,235,235)" background="rgb(56,92,46)">
+              Commissions: Open</Pill>
+          : <Pill>Commissions: Closed</Pill>
+        }
 
         <p>
-            <b>£75.</b> Includes most or all of a character. Wings/tail are liable to go off-screen. Also includes a full background scene. Final price depends on composition.
+        Once you read through and are happy with the prices and ToS, contact me on discord at <b>yanwenyuan</b>. 
+        </p>
+
+        <p>
+            <i>Please state (a) where you found me from; (b) that you're looking for a commission and what type of art you want in the first message, don't start with just "hi" or something thanks x</i>
+        </p>
+
+        <p>
+            <i>You <b>MUST</b> read through the TOS before commissioning. It contains the process and what I will/won't draw.</i>
+        </p>
+
+        <h3>Contents</h3>
+        <ol>
+            <li>
+                <a href="#prices">Prices</a>
+                <ol class="muted" style="list-style-type: lower-alpha;">
+                    <li>Full scene</li>
+                    <li>Portrait</li>
+                    <li>Refsheet (for reference only)</li>
+                </ol>
+            </li>
+            <li>
+                <a href="#tos">TOS</a>
+                <ol class="muted" style="list-style-type: lower-alpha;">
+                    <li>Eligibility</li>
+                    <li>Content</li>
+                    <li>Process</li>
+                    <li>Payment</li>
+                    <li>Usage</li>
+                </ol>
+            </li>
+        </ol>
+
+        <hr/>
+
+        <h2 id="prices">Prices</h2>
+        <p>
+            All prices in <b>GBP.</b>
+        </p>
+
+        <p>
+            Prices are <i>guidelines</i>; the quote I give you is final. This depends on complexity of scene, number of characters, etc.
+        </p>
+        
+        <p>
+            Art style kind of... depends on mood. You <i>can</i> request a specific art style <i>except</i> lineless. Everything includes shading.
+        </p>
+        
+        <h3>A. Full scene</h3>
+
+        <p>
+            A full- or partial body with a full scene. 
         </p>
         <p>
-            Surcharges guideline: +£10-25 for complex character / complex background; multiple characters prob about +£50; if it's not full bodies that's going to be less.
+            Wings, tails, and other limbs may be hidden by the scene - this is part of the composition, so please specify in advance.
         </p>
         <p>
-            Discounts guideline: -£5-10 for simpler or single colour backgrounds.
+            Final price depends on composition.
         </p>
+        <ul>
+            <li>
+                <b>£75</b> Base price: one character, simple-ish background scene
+            </li>
+            <li>
+                <b>-£15</b> No / abstract background
+            </li>
+            <li>
+                <b>+£10–£25</b> Complex character
+            </li>
+            <li>
+                <b>+£25</b> Complex background (juicy vistas)
+            </li>
+            <li>
+                <b>+£50+</b> Extra characters (discounts/free if they're my characters depending on mood; simple creatures, e.g. birds/critters count as background)
+            </li>
+        </ul>
+        <br/>
         <p>Standard Backgrounds examples:</p>
         <SlidingGallery>
             <Image src={import("../content/albums/requests/silver-vampire.jpg")} alt="Silver vampire - standard scene"></Image>
@@ -50,26 +103,44 @@ import { Image } from "astro:assets";
             <Image src={import("../content/albums/requests/stret.jpg")} alt="Stret"></Image>
             <Image src={import("../content/albums/requests/chase.jpg")} alt="Chase"></Image>
             <Image src={import("../content/albums/requests/noelle-ryukuri.jpg")} alt="Noelle Ryukiri"></Image>
-            <Image src={import("../content/albums/requests/tea-sombra-xuanhai.jpg")} alt="Sombra and Xuanhai" title="This one has two characters"></Image>
         </SlidingGallery>
         <p>Complex Backgrounds examples:</p>
         <SlidingGallery>
+            <Image src={import("../content/albums/requests/lickywicky.jpg")} alt="Lickwit - complex scene"></Image>
             <Image src={import("../content/albums/requests/grey-mountains.jpg")} alt="Grey - complex scene"></Image>
             <Image src={import("../content/albums/requests/gwydien.jpg")} alt="Gwydien - complex scene"></Image>
-            <Image src={import("../content/albums/requests/mekanip-rock.png")}  alt="Mekanip on a rock - complex scene"></Image>
-            <Image src={import("../content/albums/requests/topaz-an.jpg")} alt="Topaz and An"></Image>
+            <Image src={import("../content/albums/requests/mekanip-rock.png")}  alt="Mekanip on a rock - complex scene" title="Would include a complex character charge"></Image>
+            <Image src={import("../content/albums/requests/topaz-an.jpg")} alt="Topaz and An" title="Extra character, but it's my character so I probably wouldn't charge much"></Image>
         </SlidingGallery>
 
-        <h3>Headshots and Portraits</h3>
-
-        <p><b>£25.</b> Headshot with no or simple background (i.e. solid colour, transparent, or gradients)</p>
+        <h3>B. Portraits</h3>
 
         <p>
-            Surcharges guideline: +£5 for more background, complex characters; +£10 for more of a bust, including shoulders etc; +£idk-but-a-fair-bit if you want me to make it look <i>really</i> fancy (last image).
+            A headshot or portrait with no or simple background (solid colour, transparent, gradients).
         </p>
-        <p>
-            Discounts guideline: Possible discount for very simple character designs.
-        </p>
+
+        <ul>
+            <li>
+                <b>£25</b> Base price.
+            </li>
+            <li>
+                <b>+£5</b> Complex character charge.
+            </li>
+            <li>
+                <b>+£5</b> More background.
+            </li>
+            <li>
+                <b>+£10</b> More complex pose / bust with hands, etc.
+            </li>
+            <li>
+                <b>+£15+</b> If you want more intricate linework or lineless or extra detail. (this starts to turn into the same amount of work as <i>Full scene</i>)
+            </li>
+            <li>
+                <b>-£5</b> Very simple designs.
+            </li>
+        </ul>
+        
+        <br/>
         <p>Look through my gallery as there's a couple art styles there.</p>
         <p>
             Examples:
@@ -79,21 +150,30 @@ import { Image } from "astro:assets";
             <Image src={import("../content/albums/requests/lack-floof.jpg")} alt="Lack"></Image>
             <Image src={import("../content/albums/requests/poem-portrait.png")} alt="Poem"></Image>
             <Image src={import("../content/albums/requests/vividg.png")} alt="vivi"></Image>
-            <Image src={import("../content/albums/requests/szen-headshot.png")} alt="szen"></Image>
-            <Image src={import("../content/albums/requests/vioportrait.png")} alt="vio"></Image>
+            <Image src={import("../content/albums/requests/szen-headshot.png")} alt="szen" title="Very simple design"></Image>
         </SlidingGallery>
 
-        <h3>Reference Sheet</h3>
+        <h3>C. Reference Sheet</h3>
 
-        <p><i>LIMITED. Not usually open.</i></p>
+        <p><i>LIMITED. Only open at discresion, listed for completeness.</i></p>
 
         <p>
-            <b>£250.</b> (starting from): One "showcase" pose, 1-2 other fullbodies, 3-4 headshots, claws, tail, etc cutouts. Watercolour background, possible simple decoration.
+            Full reference sheet with neutral shading, 1-2 fullbodies, 3-4 head-, claw-, tail- etc other poses, a handful of accessory showcases if necessary. Simple background. Titles and labels and lore.
+        </p>
+        <p>
+            I will even sit on a call with you to plan out the layout.
         </p>
 
-        <p>Surcharge for Complex characters, extra poses.</p>
+        <ul>
+            <li>
+                <b>£250+</b>: Base price
+            </li>
+            <li>
+                <b>+£??</b>: Complex character surcharge
+            </li>
+        </ul>
 
-        <p>Complimentary titles and/or text, Chinese and/or English. </p>
+        <br/>
 
         <SlidingGallery>
             <Image src={import("../content/albums/requests/variken-ref.jpg")} alt="variRef"></Image>
@@ -104,19 +184,21 @@ import { Image } from "astro:assets";
 
         <hr />
 
-        <h2>TOS</h2>
+        <h2 id="tos">TOS</h2>
 
-        <h3>Eligibility</h3>
+        <h3>A. Eligibility</h3>
 
-        <p>18+ in general.</p>
+        <p>18+ please. <span class="muted">You should be able to pay me on paypal yourself.</span></p>
+
         <p>
-            Further to this, I reserve the right to say no to anyone and
-            anything without reason.
+            <b>I reserve the right to turn down any commission without reason.</b>
         </p>
 
-        <h3>Content</h3>
-        <p>No NSFW.</p>
-        <hr />
+        <h3>B. Content</h3>
+        <p>
+            <b>No NSFW.</b> 
+        </p>
+        
         <p>What I will (✓) / may consider (∼) / won't (✕) draw:</p>
         <table>
             <thead>
@@ -128,7 +210,7 @@ import { Image } from "astro:assets";
             <tbody>
                 <tr>
                     <td>✓</td>
-                    <td>Other fantasy creatures (varies, best-effort basis)</td>
+                    <td>Other fantasy creatures (best-effort basis)</td>
                 </tr>
                 <tr>
                     <td>✓</td>
@@ -136,27 +218,35 @@ import { Image } from "astro:assets";
                 </tr>
                 <tr>
                     <td>✓</td>
-                    <td >General blood and violence (no detailed insides or gore)</td >
+                    <td >Blood and violence (no guts or heavy gore)</td >
+                </tr>
+                <tr>
+                    <td>✓</td>
+                    <td >Extensive background architecture or intricate scenery (If you have the money I will draw you a city)</td >
                 </tr>
                 <tr>
                     <td>~</td>
-                    <td >Extensive background architecture or intricate scenery (I'm working on this, so probably)</td >
+                    <td>Humans or humanoid like elves, etc (not a no, i'm just not good)*</td>
                 </tr>
                 <tr>
                     <td>~</td>
-                    <td>Humans or humanoid like elves, etc</td>
+                    <td>Mechanical things, mechs, complex buildings*</td>
                 </tr>
                 <tr>
                     <td>~</td>
-                    <td>Mechanical things, mechs, complex buildings</td>
+                    <td>Dinos, probably*</td>
                 </tr>
                 <tr>
                     <td>~</td>
-                    <td>Dinos, probably</td>
+                    <td >AI references, only if that's all you have and you want a real drawing of your OC. It has to be a redraw, I won't fix AI art directly. And I hope you get a ref, or something that shows your OC from a real artist soon!</td >
                 </tr>
                 <tr>
-                    <td>~</td>
-                    <td >AI references, only if that's all you have and you want a real drawing of your OC. It has to be a redraw, I won't fix AI art directly.</td >
+                    <td>✕</td>
+                    <td>Anthropomorphic animals*</td>
+                </tr>
+                <tr>
+                    <td>✕</td>
+                    <td >Most animal-based OCs*</td >
                 </tr>
                 <tr>
                     <td>✕</td>
@@ -168,94 +258,135 @@ import { Image } from "astro:assets";
                 </tr>
                 <tr>
                     <td>✕</td>
-                    <td>Anthropomorphic animals</td>
-                </tr>
-                <tr>
-                    <td>✕</td>
-                    <td >Most other animal-based OCs</td >
-                </tr>
-                <tr>
-                    <td>✕</td>
                     <td >Anything politically charged, hateful, exclusionary, or that I deem inappropriate</td >
                 </tr>
             </tbody>
         </table>
 
-        <hr />
-
-        <p>Note:</p>
+        <p>Footnotes:</p>
         <ul>
+            <li>
+                *It doesn't hurt to ask, especially if you can take a "no"!
+            </li>
             <li>
                 If you want to include someone else's character, <b >you need their permission first</b >.
             </li>
             <li>
-                I'm confident drawing dragons, less so everything else. Everything is on best-effort basis, and you're not entitled to a refund if you talk me into drawing e.g. a human and it turns out a bit subpar.
+                I'm a dragon artist. Anything else is best-effort and you can't complain if it's sub-par.
             </li>
-            <li>Lineless rendering is on a whim, please don't request it.</li>
-            <li>List is not exhaustive. If you're not sure if I'll draw something, no harm in asking!</li>
+            <li>Lineless rendering is on a whim, <b>please don't request it</b> thx.</li>
+            <li>List is not exhaustive. If you're not sure if I'll draw something, ask!</li>
         </ul>
 
-        <h3>Process</h3>
-
-        <p> <b >I reserve the right to turn down any commission without reason.</b > </p>
-
-        <p>
-            You can describe a scene, or leave it to my judgment based on your
-            character's lore or vibe.
-        </p>
-
-        <p>
-            Please send image references. A full refsheet is best, a coloured
-            sketch works too, but I'll be extrapolating for anything not shown.
-        </p>
+        <h3>C. Process</h3>
+        
         <p><b>
             My usual art dimensions are approx. 2500 &times; 3500 px. Tell me if
             you really need it larger beforehand.
         </b></p>
-        <hr />
-        <ul>
-            <li>Composition: I'll send one or a few rough sketches first.</li>
+
+        <ol>
             <li>
-                Sketch: Small tweaks (pose, props) are unlimited, within reason.
-                Bigger changes aren't recommended, but I'll allow one or two.
+                You describe a scene and the characters in it
+                <ul class="muted">
+                    <li>You can provide a full scene and all the details</li>
+                    <li>Or, if you just want to see what I can do, give me some lore, background, mood, and I can be creative</li>
+                </ul>
             </li>
             <li>
-                Line + Colour: Corrections aren't allowed here unless I clearly
-                got something wrong (e.g. missed a colour) per your references. <b>It must be explicitly clear from reference images.</b>
+                You send your references
+                <ul class="muted">
+                    <li>You can send a collection of images as long as they clearly show your OC, ideally in neutral lighting.</li>
+                    <li>You accept me extrapolating anything not shown (e.g. if you don't show tongue colour, I will assume pinkish flesh tone)</li>
+                    <li>Remember, if the lighting is different, colours can change a bit!</li>
+                </ul>
             </li>
-        </ul>
-        <hr />
+            <li>
+                <b>Composition:</b> I compose a rough sketch of the scene
+                <ul class="muted">
+                    <li>I send you one or a few rough sketches of the scene</li>
+                    <li>You can give suggestions or corrections, composition, layout, etc</li>
+                    <li>(Please don't be like "oh i want an entirely different scene actually" too many times that'll annoy me)</li>
+                </ul>
+            </li>
+            <li>
+                <b>You pay here.</b> After you approve the composition. Full payment please. See below for terms.
+            </li>
+            <li>
+                <b>Sketch:</b> I'll send you a cleaner sketch with all the details
+                <ul class="muted">
+                    <li>You can provide feedback, ask for tweaks, things to be moved, etc</li>
+                    <li>(I'd hope by this point the scene is set and I don't want to change it again)</li>
+                </ul>
+            </li>
+            <li>
+                <b>Line + colour:</b> I send you WIPs if you want, or just a full finished piece. Once I start I don't tend to... pause all that much so it might be fairly fast paced.
+                <ul class="muted">
+                    <li>No more major changes, esp. moving things, that's a pain</li>
+                    <li>If I got your character wrong (e.g. missed a colour), and it is <b>explicitly shown</b> in references, I will adjust</li>
+                    <li>If <i>I</i> think something should be tweaked, I can adjust</li>
+                </ul>
+            </li>
+            <li>
+                Complete!
+            </li>
+        </ol>
+        
+        <h3>D. Payment</h3>
+        <p>Pay through Ko-fi, link on my homepage. <span class="muted">You can ask for a paypal.me link too ig</span></p>
         <p>
-            I don't work to deadlines or a strict queue, though I'll roughly
-            follow order. Personal drawings may be mixed in and liable to change the queue.
-        </p>
-        <h3>Payment</h3>
-        <p>Pay through Ko-fi, link on my homepage.</p>
-        <p>
-            Pay in full after the composition stage, before I start the proper
+            Pay <b>in full</b> after the composition stage, before I start the proper
             sketch.
         </p>
-        <p>If <b>I</b> decide to drop a commission, you get a full refund.</p>
+
         <p>
-            If <b>YOU</b> cancel before I start line + colour, I'll refund 50% or
-            more depending on work already done. <b >After I start line + colour, no refunds.</b >
+            Cancellation and refund terms:
         </p>
-        <h3>Usage</h3>
+
+        <ul>
+            <li>
+                If <b>I</b> cancel:
+                <ul>
+                    <li>
+                        <b>At any time</b>: you will receive a FULL refund. 
+                    </li>
+                </ul>
+            </li>
+            <li>
+                If <b>you</b> cancel:
+                <ul>
+                    <li>
+                        <b>Before paying, after composition</b>: Unfortunate! But no money has changed hands, so we're all good
+                    </li>
+                    <li>
+                        <b>After paying, during the sketch stage</b>: You receive a <b>50%</b> refund
+                    </li>
+                    <li>
+                        <b>After linework and colour is started</b>: NO REFUNDS
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>E. Usage</h3>
         <p>You can post, share, and use the art personally.</p>
         <p>Keep my seal on the art and credit me as the artist when sharing.</p>
         <p>
-            I'll also post it on my site or socials by default--tell me if you'd like it kept private.
+            I'll also post it on my site or socials by default--tell me if you'd like it kept private. <span class="muted">If we share a site, e.g. reddit, you can go first :)</span>
         </p>
         <p>
-            You may not profit commercially off my work in any manner. This includes using it in advertising or merch. I am open to discussion on commercial rights for extra charge.
+            <b>You may not profit commercially off my work in any manner.</b> This includes using it in advertising or merch. I am open to discussion on commercial rights for extra charge.
         </p>
         <p>
-            You may make further edits, but you should keep my seal, and credit me as the <i>original</i> artist. You <b>must</b> specify yourself (or whoever else) as the editor, and not make out any edited work to be original. You may <b>not</b> use generative AI models for said edits. 
+            You may make further edits, but you should keep my seal, and credit me as the <i>original</i> artist. You <b>must</b> specify yourself (or whoever else) as the editor, and not make out any edited work to be original. 
+        </p>
+        <p>
+            You may <b>not</b> use any generative AI models to edit, remix, re-create, or "build off" my work. 
         </p>
 
         <hr></hr>
 
-        <p>Terms may change. This website is version controlled; whatever terms I have when I accepted your commission apply.</p>
+        <p>Terms may change. This website is version controlled; whatever terms I have when I accepted your commission apply. Last updated uhh 2026-10-16</p>
 
         <style lang="scss">
             @use "../styles/tokens" as *;
@@ -281,6 +412,10 @@ import { Image } from "astro:assets";
 
             tr:last-child td {
                 border-bottom: none;
+            }
+
+            .muted {
+                color: $color-muted;
             }
         </style>
     </ContentPage>
