@@ -2,6 +2,15 @@ title: "神海人設 Caeleste Mare: Characters"
 description: Sketches and full drawings of original characters from CM
 cover: ./chars/moon-god-temple.jpg
 images:
+  - file: chars/zhang-tai-sketch.jpg
+    title: Second prince 張泰 Zhang Tai sketch
+    description: "Zhang Tai: founder of the Imperial Academy, prodigy in the new field of Naturalism, a bit of a madman that people are scared of"
+  - file: chars/zhang-yujing.jpg
+    title: 張欣代帝（諱宇靖）龍君禮服 Xindai Emperor Zhang Yujing in ceremonial robes
+  - file: chars/xuanhai-portrait.jpg
+    title: Rain God lineless portrait
+  - file: chars/ouyang-zhan-portrait.jpg
+    title: Ouyang Zhan lineless portrait
   - file: chars/ref-ouyang-zhan.jpg
     title: 金華真仙歐陽湛 Ouyang Zhan, leader of the Ouyang Sect and Jinhua Immortal
     description: Simple reference style
@@ -11,8 +20,6 @@ images:
   - file: chars/ref-yan-xin.jpg
     title: 燕欽王昕 Yan Xin, King Qin of Yan
     description: Simple reference style
-  - file: chars/mengsip.png
-    title: Mengwu tea emote
   - file: chars/nanjin-ji.jpg
     title: 南金霽 Nanjin Ji
     description: "Wind-piercing claw"
