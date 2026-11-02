@@ -1,29 +1,26 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContentPage from "../../components/ContentPage.astro";
 import Feature from "../../components/Feature.astro";
 ---
 
-<BaseLayout title="Golmak">
-    <ContentPage
-        title="Golmak"
-        description="【死神】The fallen god of death, now a shadow in the deep dark"
-        backHref="/"
-    >
-        <h2>Golmak</h2>
+<ContentPage
+    title="Golmak"
+    description="【死神】The fallen god of death, now a shadow in the deep dark"
+    backHref="/"
+>
+    <h2>Golmak</h2>
 
-        <Feature
-            image={import("../../content/albums/chars/golmak.png")}
-            alt="golamak"
-            title="Golmak portrait"
-            subtitle="subtitle here"
-            maxHeight="480px"
-        />
-        
-        <p>
-            Fallen God of Death, struck down when he tried to rise up against the other greater gods and
-            usurp another's throne. Now remains as a shadow in the deep dark, still highly powerful, but
-            unknowing and unacting, with his spirit deep in slumber.
-        </p>
-    </ContentPage>
-</BaseLayout>
+    <Feature
+        image={import("../../content/albums/chars/golmak.png")}
+        alt="golamak"
+        title="Golmak portrait"
+        subtitle="subtitle here"
+        maxHeight="480px"
+    />
+    
+    <p>
+        Fallen God of Death, struck down when he tried to rise up against the other greater gods and
+        usurp another's throne. Now remains as a shadow in the deep dark, still highly powerful, but
+        unknowing and unacting, with his spirit deep in slumber.
+    </p>
+</ContentPage>

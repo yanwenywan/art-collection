@@ -1,40 +1,37 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContentPage from "../../components/ContentPage.astro";
 import Feature from "../../components/Feature.astro";
-import SideImage from "../../components/SideImage.astro";
 ---
 
-<BaseLayout title="Yan Wen">
-    <ContentPage
-        title="燕文 Yan Wen"
-        description="Second son of the founding emperor of Yan, who retreated into the mountains and became a monk, and immortal under the moon venerable"
-        backHref="/"
-    >
-        <h2>Yan Wen</h2>
-        
-        <Feature
-            image={import("../../content/albums/chars/ref-yan-wen.jpg")}
-            alt="yan wen simple reference"
-            title="Yan Wen simple reference"
-            maxHeight="480px"
-        />
+<ContentPage
+    title="燕文 Yan Wen"
+    pageTitle="Yan Wen"
+    description="Second son of the founding emperor of Yan, who retreated into the mountains and became a monk, and immortal under the moon venerable"
+    backHref="/"
+>
+    <h2>Yan Wen</h2>
+    
+    <Feature
+        image={import("../../content/albums/chars/ref-yan-wen.jpg")}
+        alt="yan wen simple reference"
+        title="Yan Wen simple reference"
+        maxHeight="480px"
+    />
 
-        
-        <p>
-            Second son of the first emperor Yan Xin, a recluse scholar, unlike his elder brother the 
-            crown prince. When the Yan dynasty fell he retreated into hiding in the mountains, thus 
-            preserving his life, and was eventually forgotten by the world. He studied under and
-            became an immortal disciple of the Moon Venerable, becoming a monk and taking on the monk
-            name "Wuxuan", "Comprehending the Abtruse".
-        </p>
+    
+    <p>
+        Second son of the first emperor Yan Xin, a recluse scholar, unlike his elder brother the 
+        crown prince. When the Yan dynasty fell he retreated into hiding in the mountains, thus 
+        preserving his life, and was eventually forgotten by the world. He studied under and
+        became an immortal disciple of the Moon Venerable, becoming a monk and taking on the monk
+        name "Wuxuan", "Comprehending the Abtruse".
+    </p>
 
-        <!-- <Feature
-            image={import("../../content/albums/chars/yan-wen.jpg")}
-            alt="yan wen portrait"
-            title="Yan Wen portrait"
-            maxHeight="400px"
-        /> -->
+    <!-- <Feature
+        image={import("../../content/albums/chars/yan-wen.jpg")}
+        alt="yan wen portrait"
+        title="Yan Wen portrait"
+        maxHeight="400px"
+    /> -->
 
-    </ContentPage>
-</BaseLayout>
+</ContentPage>

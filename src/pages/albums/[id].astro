@@ -17,45 +17,43 @@ const { album } = Astro.props;
 const { title, description, images } = album.data;
 ---
 
-<BaseLayout title={title}>
 
-    <InnerPage title={title} description={description}>
+<InnerPage title={title} description={description}>
 
-    <main class="album-page">
+<main class="album-page">
 
-        {
-            images && images.length > 0 ? (
-                <div class="image-grid-wrap">
-                    <Masonry breakpointCols={{ default: 3, 768: 2, 480: 1 }}
-                             sortByHeight={true}>
-                        {images.map((img) => (
-                            <figure>
-                                <Image
-                                    src={img.file}
-                                    alt={img.title ?? ""}
-                                    width={img.file.width}
-                                    height={img.file.height}
-                                />
-                                {img.title && (
-                                    <figcaption>
-                                        <strong>{img.title}.</strong>
-                                        {img.description && (
-                                            <span>{img.description}</span>
-                                        )}
-                                    </figcaption>
-                                )}
-                            </figure>
-                        ))}
-                    </Masonry>
-                </div>
-            ) : (
-                <p class="empty">No images yet.</p>
-            )
-        }
-    </main>
+    {
+        images && images.length > 0 ? (
+            <div class="image-grid-wrap">
+                <Masonry breakpointCols={{ default: 3, 768: 2, 480: 1 }}
+                            sortByHeight={true}>
+                    {images.map((img) => (
+                        <figure>
+                            <Image
+                                src={img.file}
+                                alt={img.title ?? ""}
+                                width={img.file.width}
+                                height={img.file.height}
+                            />
+                            {img.title && (
+                                <figcaption>
+                                    <strong>{img.title}.</strong>
+                                    {img.description && (
+                                        <span>{img.description}</span>
+                                    )}
+                                </figcaption>
+                            )}
+                        </figure>
+                    ))}
+                </Masonry>
+            </div>
+        ) : (
+            <p class="empty">No images yet.</p>
+        )
+    }
+</main>
 
-    </InnerPage>
-</BaseLayout>
+</InnerPage>
 
 <script>import "../../scripts/lightbox.ts";</script>
 
