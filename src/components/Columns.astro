@@ -1,0 +1,22 @@
+---
+interface Props {
+    /** Default 2 */
+  	columnNumber?: number 
+}
+
+const { columnNumber = 2 } = Astro.props
+---
+<div class="two-col-div" style={{
+  "grid-template-columns": "1fr ".repeat(columnNumber)
+}}>
+    <slot />
+<div/>
+
+<style lang="scss">
+@use "../styles/tokens" as *;
+
+.two-col-div {
+    display: grid;
+    column-gap: $gap;
+}
+</style>

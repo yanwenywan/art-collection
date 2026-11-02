@@ -1,0 +1,30 @@
+---
+interface Props {
+	style?: {[key: string]: any}
+}
+
+const { style = {} } = Astro.props;
+---
+
+<div class="callout-content" style={style}>
+    <slot />
+</div>
+
+<style lang="scss">
+    @use "../styles/tokens" as *;
+
+    .callout-content {
+        max-width: 840px;
+        width: 90%;
+        margin: 0 auto $gap;
+        padding: $gap * 2; // $gap * 2.5 $gap * 3;
+        font-family: $font-body;
+        color: $color-text;
+        line-height: 1.7;
+        background: $color-surface;
+
+        @media screen and (max-width: 768px) {
+            padding: $gap;
+        }
+    }
+</style>

@@ -1,27 +1,63 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
 import Pill from "../components/Pill.astro";
 import SlidingGallery from "../components/SlidingGallery.astro";
 import { Image } from "astro:assets";
 import InnerPage from "../components/InnerPage.astro";
 import ContentBody from "../components/ContentBody.astro";
+import CalloutBlock from "../components/CalloutBlock.astro";
+import Center from "../components/Center.astro";
+import Columns from "../components/Columns.astro";
 
 const open = false;
 ---
 
 <InnerPage title="Commissions"
             pageTitle="Commissions Information"
-            description="Information on commissions and guideline prices. Always read the ToS.">
-<ContentBody>
+            description="Information on commissions and guideline prices. Always read the ToS."
+>
+
+<CalloutBlock style={{"background": "none", "text-align": "center", "padding": "0"}}>
     {
     open 
         ? <Pill textColor="rgb(235,235,235)" background="rgb(56,92,46)">
             Commissions: Open</Pill>
         : <Pill>Commissions: Closed</Pill>
     }
+</CalloutBlock>
 
+<CalloutBlock>
+    <Center>
+        <h3 class="sansserif">QUICK OVERVIEW</h3>
+    </Center>
+    <Columns>
+        <div>
+            <h3 class="sansserif">Simple price list</h3>
+            <ul>
+                <li><b>£75</b>: Full scene</li>
+                <li><b>£25</b>: Portrait</li>
+                <li><b>£250</b>: Reference sheet</li>
+            </ul>
+            <p class="muted">
+                <i>Prices modified based on complexity. Reference sheets not generally available and at discretion.</i>
+            </p>
+        </div>
+        <div>
+            <h3 class="sansserif">Process</h3>
+            <ol>
+                <li>You come to me with an idea</li>
+                <li>I make a mockup sketch</li>
+                <li>You pay</li>
+                <li>I make a full sketch</li>
+                <li>I line and colour</li>
+                <li>Finished!</li>
+            </ol>
+        </div>
+    </Columns>
+</CalloutBlock>
+
+<ContentBody>
+    <h2>Commissions Process</h2>
     <p>
-    <br/>
     Once you read through and are happy with the prices and ToS, contact me on discord at <b>yanwenyuan</b>. 
     </p>
 
@@ -420,6 +456,10 @@ const open = false;
 
         .muted {
             color: $color-muted;
+        }
+
+        .sansserif {
+            font-family: $font-display;
         }
     </style>
 </ContentBody>

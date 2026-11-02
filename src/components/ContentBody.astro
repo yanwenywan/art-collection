@@ -1,4 +1,14 @@
-<div class="content-body">
+---
+interface Props {
+    /** Square versus the default long top and longer bottom padding */
+	squarePadding?: boolean;
+}
+
+const { squarePadding = false } = Astro.props;
+---
+
+<div class={"content-body" + 
+            (squarePadding ? " square" : "")}>
     <slot />
 </div>
 
@@ -14,10 +24,17 @@
         color: $color-text;
         line-height: 1.7;
         background: $color-page;
-        border-radius: 4px;
 
         @media screen and (max-width: 768px) {
             padding: $gap * 2 $gap $gap * 3;
+
+            .square {
+                padding: $gap
+            }
+        }
+
+        .square {
+            padding: $gap * 2;
         }
     }
 </style>
